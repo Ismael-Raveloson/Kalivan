@@ -24,7 +24,7 @@
 
     <div class="page">
         <div class="page__facture">
-            <h2>Your cart !! </h2>
+            <!-- <h2>Your cart !! </h2> -->
             <table class="page__facture__detail">
                 <tr class="page__facture__detail__entete">
                     <td class="image">Product</td>
@@ -74,7 +74,12 @@
                     </td>
                     <td class="total">5 000 Ar</td>
                 </tr>
-
+                <tr class="page__facture__detail__pied">
+                    <td class="image"></td>
+                    <td class="nom"></td>
+                    <td class="prix"></td>
+                    <td class="panier"><button class="valider">Valider Panier <i class="fas fa-cart-arrow-down"></i></button></td>
+                </tr>
             </table>
         </div>
     </div>

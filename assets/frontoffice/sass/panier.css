@@ -128,7 +128,7 @@ body {
 
 .page {
   width: 100%;
-  height: 180vh;
+  height: auto;
   padding-top: 90px;
   display: flex;
   flex-direction: column;
@@ -178,7 +178,7 @@ body {
   font-size: 14px;
   display: flex;
   text-align: center;
-  height: 30vh;
+  height: 20vh;
   justify-content: center;
   align-items: center;
 }
@@ -187,13 +187,13 @@ body {
 }
 .page__facture__detail__corps .image img {
   max-width: 100%;
-  height: 90%;
+  height: 18vh;
 }
 .page__facture__detail__corps .nom {
   width: 25%;
   text-align: left;
   margin-left: 40px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
 }
 .page__facture__detail__corps .prix {
@@ -243,4 +243,26 @@ body {
 .page__facture__detail__corps .total {
   width: 20%;
   font-weight: 600;
+}
+.page__facture__detail__pied {
+  background-color: #f5f7fa;
+  height: 10vh;
+  display: block;
+}
+.page__facture__detail__pied .panier {
+  margin-top: 15px;
+  float: right;
+  margin-right: 10vh;
+}
+.page__facture__detail__pied .panier button {
+  background-color: #76C090;
+  border: 1px solid #76C090;
+  color: white;
+  border-radius: 6px;
+  padding: 0px 10px 0px 10px;
+  height: 6vh;
+  cursor: pointer;
+}
+.page__facture__detail__pied .panier button i {
+  margin-left: 10px;
 }/*# sourceMappingURL=panier.css.map */
