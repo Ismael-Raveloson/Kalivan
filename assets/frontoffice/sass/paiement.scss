@@ -1,0 +1,110 @@
+@import '_navbar.scss';
+@import '_footer.scss';
+
+
+.page{
+    width: 100%;
+    height: auto;
+    padding-top: 90px;
+    &__paiement{
+        margin: auto auto;
+        width: 70%;
+        display: grid;
+        grid-template-columns:50% 50% ;
+        // background-color: red;
+        &__image{
+            height: 90vh;
+            // background-color: cyan;
+
+            img{
+                width: auto;
+                height: 95%;
+            }
+
+        }
+        &__formulaire{
+            height: 90vh;
+            // margin: auto auto;
+
+            h2{
+                text-align: center;
+
+            }
+            p{
+                // background-color: red;  
+                font-size: 14px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                // background-color: red;
+            }
+            i{
+                font-size: 12px;
+                margin-left: 15px;
+            }
+            input{
+                float: right;
+                margin-right: 3vw;
+                margin-top: -10px;
+                width: 15vw;
+                height: 5vh;
+                border-radius: 8px;
+                border: 1px solid grey;
+                padding-left: 10px;
+                padding-right: 10px;        
+            }
+
+            button{
+                a{
+                    text-decoration: none;
+                    color: $light;
+                }
+                margin-top: 20px;
+                border-radius: 8px;
+                height: 5vh;
+                width: 10vw;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: $lime;
+                color: white;
+                border: none;
+                cursor: pointer;
+                float: right;
+                margin-right: 3vw;
+            }
+            button.retour{
+                margin-top: 20px;
+                border-radius: 8px;
+                height: 5vh;
+                width: 10vw;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: $orange;
+                color: white;
+                border: none;
+                cursor: pointer;
+                float: left;
+                margin-right: 3vw;
+            }
+
+            label{
+                margin-right: 7vw;
+                float: right;
+            }
+            // background-color: purple;
+
+            .icons{
+                // background-color: red;
+                display: flex;
+                column-gap: 20px;
+                margin-top: 150px;
+                justify-content: center;
+                // justify-content: flex;
+
+                img{
+                    max-width: 100%;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}

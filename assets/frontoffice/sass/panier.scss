@@ -1,0 +1,133 @@
+@import '_navbar.scss';
+@import '_footer.scss';
+
+.page{
+    width: 100%;
+    height: 180vh;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__facture{
+        // background-color: red;
+        width: 100%;
+
+        h2{
+            padding-top: 10px;
+            color: $lime;
+            margin-top: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        &__detail{  
+            width: 70%;
+            margin: auto auto;
+
+            &__entete{
+                padding-top: 8px;
+                font-size: 14px;
+                display: flex;
+                text-align: center;
+                height: 5vh;
+                background-color: #f5f7fa;
+
+                .image{
+                    width: 25%;
+                }
+                .nom{
+                    width: 25%;
+                }
+                .prix{
+                    width: 15%;
+                }
+                .quantity{
+                    width: 15%;
+                }
+                .total{
+                    width: 20%;
+                }
+            }
+
+            &__corps{
+                background-color: $softlight;
+                margin-top: 4px;
+                padding-top: 4px;
+                font-size: 14px;
+                display: flex;
+                text-align: center;
+                height: 30vh;
+                // background-color: aliceblue;
+                justify-content:center;
+                align-items: center;
+                .image{
+                    width: 25%;
+                    img{
+                        max-width: 100%;
+                        height:90%;
+                    }
+                }
+                .nom{
+                    width: 25%;
+                    text-align: left;
+                    margin-left: 40px;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+                .prix{
+                    width: 15%;
+                    font-weight: 600;
+                }
+
+                td.quantity{
+                    width: 15%;
+                    span.quantity{
+                        display: flex;
+                        justify-content: center;
+                        float: right;
+                        margin-right: 30px;
+                        p{
+                            float: right;
+                            font-size: 12px;
+                        }
+
+                        span.quantity__button{
+                            margin-top: 5px ;
+                            text-align: center;
+                            i{
+                                font-size: 10px;
+                            }
+                            border: none;
+                            height: 3vh;
+                            background-color: transparent;
+                            padding: 0px 4px 0px 4px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+                        
+                    }
+
+                    span.quantity input[type=number]{
+                        appearance: textfield;
+                        width: 3.5vw;
+                        height: 4.5vh;
+                        float: right;
+                        padding-left: 10px;
+                        text-align: center;
+                        background-color: #f5f7fa;
+                        border: none;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+                }
+
+                .total{
+                    width: 20%;
+                    font-weight: 600;
+                }
+            }
+
+        }
+    }
+}

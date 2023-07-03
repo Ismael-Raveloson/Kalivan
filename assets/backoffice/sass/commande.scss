@@ -1,0 +1,434 @@
+@import '_navbar.scss';
+@import '_footer.scss';
+
+.page{
+    width: 100%;
+    min-height: 90vh;
+    height: auto;
+    padding-top: 90px;
+
+    &__commande{
+        &__header{
+            text-align: center; 
+ 
+            h4{
+             margin-bottom: 20px;
+             color: $orange;
+            }
+ 
+            .filter-container{
+                margin-bottom: 40px;
+                 a{
+                     margin: 0px 14px 0px 14px;
+                     text-decoration: none;
+                     color: inherit;
+                 }
+                 .filter-link.active{
+                     color: $lime;
+                 }
+                 
+            }
+            
+        }
+
+        &__valider{
+            
+            width: 70%;
+            margin: auto auto;
+            &__content{
+                .tableau{
+                    width: 100%;
+                    .entete{
+                        height: 6vh;    
+                        background-color: $darkgrey;
+                        color: $light;
+                        font-size: 13px;
+    
+                        td{
+                            padding-left: 20px;
+                        }
+                        .numero{
+                            width: 12%;
+                        }
+                        .produit{
+                            width: 30%;
+                        }
+                        .prix{
+                            width: 20%;
+                        }
+                        .quantite{
+                            width: 12%;
+                        }
+                        .total{
+                            text-align: center;
+                            font-weight: 700; 
+                        }
+                        
+                    }
+    
+                    .corps{
+                        height: 6vh;    
+                        font-size: 15px;
+                        td{
+                            background-color: whitesmoke;
+                            padding-left: 20px;
+                        }
+                        .numero{
+                            font-size: 15px;
+                            font-weight: 600;
+                        }
+                        .prix{
+
+                        }
+                        .total{
+
+                            text-align: center;
+                            font-weight: 700; 
+                        }
+                        .produit{
+
+                        }
+                        .quantite{
+
+                        }
+
+                        .annuler{
+                            background-color: transparent;
+                            button{
+                                padding: 8px 6px 8px 6px;
+                                width: 6vw;
+                                background-color: red;
+                                color: $light;
+                                border: none;
+                                border-radius: 8px;
+                                a{
+                                    color: $light;
+                                    text-decoration: none;
+                                }
+                            }
+
+                        }
+                        .cuisine{
+                            background-color: transparent;
+                            button{
+                                padding: 8px 6px 8px 6px;
+                                width: 10vw;
+                                background-color: $lime;
+                                color: $light;
+                                border: none;
+                                border-radius: 8px;
+                                a{
+                                    color: $light;
+                                    text-decoration: none;
+                                }
+                            }                            
+                        }
+    
+                    }
+    
+
+                }
+            }
+        }
+
+        &__actuel{
+            display: none;
+            width: 70%;
+            margin: auto auto;
+            &__content{
+                .tableau{
+                    width: 100%;
+                    .entete{
+                        height: 6vh;    
+                        background-color: $darkgrey;
+                        color: $light;
+                        font-size: 13px;
+    
+                        td{
+                            padding-left: 20px;
+                        }
+                        .numero{
+                            width: 12%;
+                        }
+                        .produit{
+                            width: 30%;
+                        }
+                        .prix{
+                            width: 20%;
+                        }
+                        .quantite{
+                            width: 12%;
+                        }
+                        .total{
+                            text-align: center;
+                            font-weight: 700; 
+                        }
+                        
+                    }
+    
+                    .corps{
+                        height: 6vh;    
+                        font-size: 15px;
+                        td{
+                            background-color: whitesmoke;
+                            padding-left: 20px;
+                        }
+                        .numero{
+                            font-size: 15px;
+                            font-weight: 600;
+                        }
+                        .prix{
+
+                        }
+                        .total{
+
+                            text-align: center;
+                            font-weight: 700; 
+                        }
+                        .produit{
+
+                        }
+                        .quantite{
+
+                        }
+
+                        .annuler{
+                            background-color: transparent;
+                            button{
+                                padding: 8px 6px 8px 6px;
+                                width: 6vw;
+                                background-color: red;
+                                color: $light;
+                                border: none;
+                                border-radius: 8px;
+                                a{
+                                    color: $light;
+                                    text-decoration: none;
+                                }
+                            }
+
+                        }
+                        .cuisine{
+                            background-color: transparent;
+                            button{
+                                padding: 8px 6px 8px 6px;
+                                width: 10vw;
+                                background-color: $lime;
+                                color: $light;
+                                border: none;
+                                border-radius: 8px;
+                                a{
+                                    color: $light;
+                                    text-decoration: none;
+                                }
+                            }                            
+                        }
+    
+                    }
+    
+
+                }
+            }
+        }
+
+        &__attente{
+            display: none;
+            width: 70%;
+            margin: auto auto;
+            &__content{
+                .tableau{
+                    width: 100%;
+                    .entete{
+                        height: 6vh;    
+                        background-color: $darkgrey;
+                        color: $light;
+                        font-size: 13px;
+    
+                        td{
+                            padding-left: 20px;
+                        }
+                        .numero{
+                            width: 12%;
+                        }
+                        .produit{
+                            width: 30%;
+                        }
+                        .prix{
+                            width: 20%;
+                        }
+                        .quantite{
+                            width: 12%;
+                        }
+                        .total{
+                            text-align: center;
+                            font-weight: 700; 
+                        }
+                        
+                    }
+    
+                    .corps{
+                        height: 6vh;    
+                        font-size: 15px;
+                        td{
+                            background-color: whitesmoke;
+                            padding-left: 20px;
+                        }
+                        .numero{
+                            font-size: 15px;
+                            font-weight: 600;
+                        }
+                        .prix{
+
+                        }
+                        .total{
+
+                            text-align: center;
+                            font-weight: 700; 
+                        }
+                        .produit{
+
+                        }
+                        .quantite{
+
+                        }
+
+                        .annuler{
+                            background-color: transparent;
+                            button{
+                                padding: 8px 6px 8px 6px;
+                                width: 6vw;
+                                background-color: red;
+                                color: $light;
+                                border: none;
+                                border-radius: 8px;
+                                a{
+                                    color: $light;
+                                    text-decoration: none;
+                                }
+                            }
+
+                        }
+                        .cuisine{
+                            background-color: transparent;
+                            button{
+                                padding: 8px 6px 8px 6px;
+                                width: 10vw;
+                                background-color: $lime;
+                                color: $light;
+                                border: none;
+                                border-radius: 8px;
+                                a{
+                                    color: $light;
+                                    text-decoration: none;
+                                }
+                            }                            
+                        }
+    
+                    }
+    
+
+                }
+            }
+        }
+
+        &__fini{
+            display: none;
+            width: 70%;
+            margin: auto auto;
+            &__content{
+                .tableau{
+                    width: 100%;
+                    .entete{
+                        height: 6vh;    
+                        background-color: $darkgrey;
+                        color: $light;
+                        font-size: 13px;
+    
+                        td{
+                            padding-left: 20px;
+                        }
+                        .numero{
+                            width: 12%;
+                        }
+                        .produit{
+                            width: 30%;
+                        }
+                        .prix{
+                            width: 20%;
+                        }
+                        .quantite{
+                            width: 12%;
+                        }
+                        .total{
+                            text-align: center;
+                            font-weight: 700; 
+                        }
+                        
+                    }
+    
+                    .corps{
+                        height: 6vh;    
+                        font-size: 15px;
+                        td{
+                            background-color: whitesmoke;
+                            padding-left: 20px;
+                        }
+                        .numero{
+                            font-size: 15px;
+                            font-weight: 600;
+                        }
+                        .prix{
+
+                        }
+                        .total{
+
+                            text-align: center;
+                            font-weight: 700; 
+                        }
+                        .produit{
+
+                        }
+                        .quantite{
+
+                        }
+
+                        .annuler{
+                            background-color: transparent;
+                            button{
+                                padding: 8px 6px 8px 6px;
+                                width: 6vw;
+                                background-color: red;
+                                color: $light;
+                                border: none;
+                                border-radius: 8px;
+                                a{
+                                    color: $light;
+                                    text-decoration: none;
+                                }
+                            }
+
+                        }
+                        .cuisine{
+                            background-color: transparent;
+                            button{
+                                padding: 8px 6px 8px 6px;
+                                width: 10vw;
+                                background-color: $lime;
+                                color: $light;
+                                border: none;
+                                border-radius: 8px;
+                                a{
+                                    color: $light;
+                                    text-decoration: none;
+                                }
+                            }                            
+                        }
+    
+                    }
+    
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,269 @@
+.navbar__list--links, .navbar__list {
+  display: flex;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.navbar {
+  background: black;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+}
+.navbar__logo {
+  cursor: pointer;
+  margin-left: 24px;
+  margin-top: 10px;
+}
+.navbar__logo img {
+  width: 100%;
+  height: 6.5vh;
+}
+.navbar__list {
+  list-style: none;
+  text-align: center;
+  margin-right: 24px;
+  font-size: 0.9em;
+}
+@media screen and (max-width: 768px) {
+  .navbar__list {
+    display: none;
+  }
+}
+.navbar__list--links {
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  color: white;
+}
+.navbar__list--links:hover {
+  color: #76C090;
+  transition: all 0.3s ease;
+}
+
+.footer {
+  margin-top: 40px;
+  color: white;
+  background-color: rgb(33, 32, 32);
+  width: 100%;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: 50% 50%; /* Divide the footer into two equal columns */
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+.footer__info {
+  position: relative;
+  padding-left: 5vw;
+  padding-top: 5vh;
+  padding-right: 5vw;
+}
+.footer__info__media {
+  margin-top: 85px;
+  text-align: center;
+}
+.footer__info__media i {
+  font-size: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.footer__info img {
+  padding-left: 18vw;
+  height: 6vh;
+  justify-content: center;
+  max-width: 100%;
+}
+.footer__info p {
+  row-gap: 10px;
+  margin-left: 5vw;
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+  width: 30vw;
+  position: absolute;
+}
+.footer__newsletter {
+  padding-left: 5vw;
+  padding-top: 5vh;
+  padding-right: 5vw;
+}
+.footer__newsletter p {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.footer__newsletter input[type=email] {
+  margin-top: 10px;
+  width: 15vw;
+  height: 5vh;
+  border-radius: 8px;
+  border: 1px solid grey;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.footer__newsletter button {
+  border-radius: 8px;
+  height: 5vh;
+  width: 6vw;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #76C090;
+  color: white;
+  cursor: pointer;
+}
+
+.page {
+  width: 60%;
+  margin: auto auto;
+  height: auto;
+  padding-top: 90px;
+}
+.page button.pdf {
+  cursor: pointer;
+  float: right;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: #76C090;
+  border: none;
+  color: white;
+  width: auto;
+  padding: 8px 10px 8px 10px;
+  height: 6vh;
+}
+.page button.pdf i {
+  margin-right: 10px;
+}
+.page__facture__header {
+  background-color: rgb(33, 32, 32);
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.page__facture__header__logo {
+  padding-left: 30px;
+}
+.page__facture__header__logo img {
+  max-width: 100%;
+  height: 80px;
+}
+.page__facture__header__entete {
+  justify-self: end;
+  margin-right: 20px;
+}
+.page__facture__header__entete h2 {
+  color: #76C090;
+  font-size: 22px;
+}
+.page__facture__header__entete p.reference {
+  margin-top: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.page__facture__header__entete p {
+  margin-top: 5px;
+  font-size: 13px;
+}
+.page__facture__content .facture {
+  width: 100%;
+}
+.page__facture__content .facture .entete {
+  height: 6vh;
+  background-color: ghostwhite;
+  font-size: 13px;
+}
+.page__facture__content .facture .entete td {
+  padding-left: 20px;
+}
+.page__facture__content .facture .entete .numero {
+  width: 12%;
+}
+.page__facture__content .facture .entete .produit {
+  width: 35%;
+}
+.page__facture__content .facture .entete .prix {
+  width: 20%;
+}
+.page__facture__content .facture .entete .quantite {
+  width: 12%;
+}
+.page__facture__content .facture .entete .total {
+  font-weight: 700;
+}
+.page__facture__content .facture .corps {
+  height: 6vh;
+  background-color: ghostwhite;
+  font-size: 15px;
+}
+.page__facture__content .facture .corps td {
+  padding-left: 20px;
+}
+.page__facture__content .facture .corps .numero {
+  font-size: 15px;
+  font-weight: 600;
+}
+.page__facture__content .facture .corps .total {
+  font-weight: 700;
+}
+.page__facture__content .facture .subtotal {
+  height: 6vh;
+  background-color: ghostwhite;
+  font-size: 15px;
+}
+.page__facture__content .facture .subtotal td {
+  padding-left: 20px;
+}
+.page__facture__content .facture .subtotal .nom {
+  font-size: 15px;
+  font-weight: 600;
+}
+.page__facture__content .facture .subtotal .total {
+  font-weight: 700;
+}
+.page__facture__footer {
+  background-color: rgb(33, 32, 32);
+  color: white;
+  padding-bottom: 20px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-top: 20px;
+}
+.page__facture__footer .right {
+  justify-self: end;
+  margin-right: 10vw;
+}
+.page__facture__footer .right i {
+  font-size: 18px;
+  margin-top: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.page__facture__footer .left {
+  margin-left: 6vw;
+  font-size: 14px;
+}
+.page__facture__footer .left i {
+  margin-right: 10px;
+}
+.page__facture__footer .left p {
+  margin-top: 15px;
+}/*# sourceMappingURL=facture.css.map */

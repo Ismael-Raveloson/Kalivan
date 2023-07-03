@@ -1,0 +1,120 @@
+
+#divmail{
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+#name{
+    margin-top: 150px;
+    margin-bottom: 40px;
+    margin-left: 120px;
+    color:#F39121;
+}
+
+.formulaire{
+    height:30vh;
+    margin-left: -50px;
+}
+
+.container .row{
+    margin: auto auto;
+    background-color:white;
+    box-shadow: 0 2px 10px rgba(53, 53, 53, 0.2);
+    border-radius: 30px;
+    margin-top: 20px;
+    width: 60vw;
+}
+
+.img-responsive{
+    max-width: 100%;
+    height: 95vh;
+    margin-left: -15px;
+    border-radius: 20px;
+}
+
+#error p{
+    margin-top: 20px;
+    margin-left: 80px;
+    color: red;
+}
+
+#btn_connect{
+    background-color: #76C090;
+    color: white;
+    margin-top: 30px;
+    margin-left: 120px;
+}
+
+#btn_connect:hover{
+    background-color: #F39121;
+    color: white;
+    border: 1px solid #F39121;
+}
+
+#username{
+    width: 300px;
+    border: 1px solid #76C090;
+    background-color: white;
+}
+
+#password{
+    width: 295px;
+    background-color: white;
+    border: 1px solid #76C090;
+}
+
+#suggestion{
+    margin-top: 20px;
+    margin-left: 140px;
+    font-size: 12px;
+}
+
+#many_btn{
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+#btn_facebook:hover{
+    background-color: rgb(2, 2, 177);
+    color:white;
+    border: 1px solid rgb(2, 2, 177);
+}
+
+#btn_facebook{
+    background-color: white;
+    color: rgb(2, 2, 177);
+    border: 1px solid rgb(2, 2, 177);
+}
+
+#btn_instagram{
+    background-color: white;
+    color: rgb(210, 53, 53);
+    border: 1px solid rgb(210, 53, 53);
+}
+
+#btn_instagram:hover{
+    background-color: rgb(210, 53, 53);
+    color: white;
+    border: 1px solid rgb(210, 53, 53);
+}
+
+#btn_twitter{
+    background-color: white;
+    color: rgb(0, 195, 255);
+    border: 1px solid rgb(0, 195, 255);
+}
+
+#btn_twitter:hover{
+    background-color: rgb(0, 195, 255);
+    color: white;
+    border: 1px solid rgb(0, 195, 255);
+}
+
+.icon_logo{
+    margin-left: 10px;
+}
+
+#sign_up{
+    margin-top: 40px;
+    margin-left: 70px;
+}

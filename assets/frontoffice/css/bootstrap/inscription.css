@@ -1,0 +1,135 @@
+.formulaire{
+    width: 450px;
+    margin-left: 100px;
+}
+
+#name{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    margin-left: 120px;
+    color: #009394;
+}
+
+.container{
+    margin-top: 20px;
+}
+
+.container .row{
+    background-color:rgb(245, 245, 245);
+    border-radius: 30px;
+    width: 1000px;
+}
+
+.img-responsive{
+    width: auto;
+    height: 95vh;
+    margin-left: 100px;
+    border-radius: 20px;
+}
+
+#username{
+    width: 300px;
+    border: 1px solid #009394;
+    background-color: white;
+}
+
+#email{
+    width: 300px;
+    border: 1px solid #009394;
+    background-color: white;
+}
+
+#daty{
+    width: 300px;
+    border: 1px solid #009394;
+    background-color: white; 
+}
+
+#motdepasse{
+    width: 295px;
+    border: 1px solid #009394;
+    background-color: white;
+}
+
+#divmail{
+    
+}
+
+#divname{
+    margin-top: 20px;
+}
+
+#divdaty{
+    margin-top: 20px;
+}
+
+#divmdp{
+    margin-top: 20px;
+}
+
+#btn_connect{
+    background-color: white;
+    margin-top: 30px;
+    margin-left: 120px;
+}
+
+#btn_connect:hover{
+    background-color: #00E0C7;
+    color: white;
+    border: 1px solid #00E0C7;
+}
+
+#suggestion{
+    margin-top: 20px;
+    margin-left: 120px;
+    font-size: 12px;
+}
+
+#many_btn{
+    margin-top: 20px;
+}
+
+#btn_facebook:hover{
+    background-color: rgb(2, 2, 177);
+    color:white;
+    border: 1px solid rgb(2, 2, 177);
+}
+
+#btn_facebook{
+    background-color: white;
+    color: rgb(2, 2, 177);
+    border: 1px solid rgb(2, 2, 177);
+}
+
+#btn_instagram{
+    background-color: white;
+    color: rgb(210, 53, 53);
+    border: 1px solid rgb(210, 53, 53);
+}
+
+#btn_instagram:hover{
+    background-color: rgb(210, 53, 53);
+    color: white;
+    border: 1px solid rgb(210, 53, 53);
+}
+
+#btn_twitter{
+    background-color: white;
+    color: rgb(0, 195, 255);
+    border: 1px solid rgb(0, 195, 255);
+}
+
+#btn_twitter:hover{
+    background-color: rgb(0, 195, 255);
+    color: white;
+    border: 1px solid rgb(0, 195, 255);
+}
+
+.icon_logo{
+    margin-left: 10px;
+}
+
+#sign_up{
+    margin-top: 40px;
+    margin-left: 40px;
+}

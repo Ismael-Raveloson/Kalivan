@@ -1,0 +1,170 @@
+@import '_navbar.scss';
+@import '_footer.scss';
+
+.page{
+    width: 60%;
+    margin: auto auto;
+    height: auto;
+    padding-top: 90px;
+
+    button.pdf{
+        cursor: pointer;
+        float: right;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+        background-color: $lime;
+        border: none;
+        color: $light;
+        width: auto;
+        padding: 8px 10px 8px 10px;
+        height: 6vh;
+        i{
+            margin-right: 10px;
+        }
+    }
+
+    &__facture{
+
+        &__header{
+            background-color: $darkgrey;
+            color: $light;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 10px;
+            padding-left: 10px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+    
+            &__logo{
+                padding-left: 30px;
+                img{
+                    max-width: 100%;
+                    height: 80px;
+                }
+            }
+
+            &__entete{
+                // display: flex;
+                // flex-direction: column;
+                justify-self: end;
+                // background-color: beige;
+                margin-right: 20px;
+                h2{
+                    color: $lime;
+                    font-size: 22px;
+                }
+                p.reference{
+                    margin-top: 10px;
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                }
+                p{
+                    margin-top: 5px;
+                    font-size: 13px;
+                }
+            }
+        }
+        &__content{
+            .facture{
+                width: 100%;
+                .entete{
+                    height: 6vh;    
+                    background-color: ghostwhite;
+                    font-size: 13px;
+
+                    td{
+                        padding-left: 20px;
+                    }
+                    .numero{
+                        width: 12%;
+                    }
+                    .produit{
+                        width: 35%;
+                    }
+                    .prix{
+                        width: 20%;
+                    }
+                    .quantite{
+                        width: 12%;
+                    }
+                    .total{
+                        font-weight: 700; 
+                    }
+                }
+
+                .corps{
+                    height: 6vh;    
+                    background-color: ghostwhite;
+                    font-size: 15px;
+                    td{
+                        padding-left: 20px;
+                    }
+                    .numero{
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                    .prix{
+                        
+                    }
+                    .total{
+                        font-weight: 700; 
+                    }
+
+                }
+
+                .subtotal{
+                    height: 6vh;    
+                    background-color: ghostwhite;
+                    font-size: 15px;
+                    td{
+                        padding-left: 20px;
+                    }
+                    .nom{
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                    .total{
+                        font-weight: 700; 
+                    }
+
+                }
+            }
+        }
+
+        &__footer{
+            background-color: $darkgrey;
+            color: $light;
+            padding-bottom: 20px;
+            height: auto;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding-top: 20px;
+
+            .right{
+                justify-self: end;
+                margin-right: 10vw;
+
+                i{
+                    font-size: 18px;
+                    margin-top:25px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+
+            .left{
+                margin-left: 6vw;
+                font-size: 14px;
+                i{
+                    margin-right: 10px;
+                }
+                p{        
+                    margin-top: 15px;
+                }
+            }
+
+        }
+    }
+    
+}

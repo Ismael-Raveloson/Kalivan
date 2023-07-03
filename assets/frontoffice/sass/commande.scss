@@ -1,0 +1,294 @@
+@import '_navbar.scss';
+@import '_footer.scss';
+
+
+.page{
+    height: auto;
+    padding-top: 80px;
+    width: 100%;
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__platjour{
+        width: 100%;
+        background-color: $darkgrey;
+        padding-bottom: 4vh;
+        // padding-left: 15vw;
+        h2.title{
+            padding-top: 20px;
+            padding-bottom: 10px;
+            color: $lime;
+            // margin-top: 10px;
+            text-align: center;
+        }
+
+        &__content{
+            padding-left: 7vw;
+            display: grid;
+            grid-template-columns: 35% 35% 30%;
+            // background-color: red;
+            row-gap: 40px;
+            width: 80%;
+            margin: auto auto;
+            padding-right: 8vw;
+            padding-top: 4vh;
+            padding-bottom: 4vh;
+            justify-content: center;
+            &__card{
+                background-color: $light;
+                // background-color: blue;
+                padding-bottom: 10px;
+                width: 20vw;
+                height: auto;
+                img{
+                    max-width: 100%;
+                    height: 30vh;
+                }
+                h2{
+                    height: 10vh;
+                    padding-left: 10px;
+                    margin-top: 8px;
+                }
+                p{
+                    height: 5vh;
+                    padding-left: 10px;
+                    width: 15vw;
+                    font-size: 11px;
+                    margin-bottom: 25px;
+                }
+
+                &__info{
+                    margin-bottom: 10px;
+                    span.quantity{
+                        display: flex;
+                        justify-content: center;
+                        float: right;
+                        margin-right: 30px;
+                        p{
+                            float: right;
+                            font-size: 12px;
+                        }
+
+                        span.quantity__button{
+                            margin-top: 5px ;
+                            text-align: center;
+                            i{
+                                font-size: 10px;
+                            }
+                            border: none;
+                            height: 3vh;
+                            background-color: transparent;
+                            padding: 0px 4px 0px 4px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+                        
+                    }
+
+                    span.quantity input[type=number]{
+                        appearance: textfield;
+                        width: 3.5vw;
+                        height: 4.5vh;
+                        float: right;
+                        padding-left: 10px;
+                        text-align: center;
+                        background-color: #f5f7fa;
+                        border: none;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+
+                    
+                    span.prix{
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        font-weight: bolder;
+                        padding-left: 14px;
+                        font-size: 16px;
+                        font-style: normal;
+                        margin-top: auto;
+                        color: $orange;
+                        // background-color: red;
+                    }
+                }
+                
+                button.valider{
+                    background-color: $lime;
+                    color: $light;
+                    border: 2px solid $lime;
+                    width: 7vw;
+                    padding: 8px 0px 8px 0px;
+                    float: right;
+                    margin-top: 10px;
+                    margin-right: 30px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    i{
+                        text-decoration: none;
+                        color: $light;
+                    }
+                }
+                button.valider:hover{
+                    background-color: $light;
+                    color: $lime;
+                    border: 2px solid $lime;
+                    transition: all 0.6s ease;
+                    i{
+                        text-decoration: none;
+                        color: $lime;
+                    }
+                }
+            }
+        }
+    }
+
+    &__menu{
+        width: 100%;
+        margin-top: 25px;
+        // background-color: red;
+        
+        &__header{
+           text-align: center; 
+
+           h4{
+            margin-bottom: 20px;
+            color: $orange;
+           }
+
+           .filter-container{
+                a{
+                    margin: 0px 14px 0px 14px;
+                    text-decoration: none;
+                    color: inherit;
+                }
+                .filter-link.active{
+                    color: $lime;
+                }
+                
+           }
+           
+        }
+
+        &__content{
+            padding-left: 7vw;
+            display: grid;
+            grid-template-columns: 35% 35% 30%;
+            // background-color: red;
+            row-gap: 40px;
+            width: 80%;
+            margin: auto auto;
+            padding-right: 8vw;
+            padding-top: 4vh;
+            padding-bottom: 4vh;
+            justify-content: center;    
+
+                &__card{
+                    background-color: $light;
+                    // background-color: blue;
+                    padding-bottom: 10px;
+                    width: 20vw;
+                    box-shadow: 0 2px 10px rgba(53, 53, 53, 0.2);
+                    height: auto;
+                    img{
+                        max-width: 100%;
+                        height: 30vh;
+                    }
+                    h2{
+                        height: 10vh;
+                        padding-left: 10px;
+                        margin-top: 8px;
+                    }
+                    p{
+                        height: 5vh;
+                        padding-left: 10px;
+                        width: 15vw;
+                        font-size: 11px;
+                        margin-bottom: 25px;
+                    }
+    
+                    &__info{
+                        margin-bottom: 10px;
+                        span.quantity{
+                            display: flex;
+                            justify-content: center;
+                            float: right;
+                            margin-right: 30px;
+                            p{
+                                float: right;
+                                font-size: 12px;
+                            }
+    
+                            span.quantity__button{
+                                margin-top: 5px ;
+                                text-align: center;
+                                i{
+                                    font-size: 10px;
+                                }
+                                border: none;
+                                height: 3vh;
+                                background-color: transparent;
+                                padding: 0px 4px 0px 4px;
+                                border-radius: 50%;
+                                cursor: pointer;
+                            }
+                            
+                        }
+    
+                        span.quantity input[type=number]{
+                            appearance: textfield;
+                            width: 3.5vw;
+                            height: 4.5vh;
+                            float: right;
+                            padding-left: 10px;
+                            text-align: center;
+                            background-color: #f5f7fa;
+                            border: none;
+                            margin-left: 5px;
+                            margin-right: 5px;
+                        }
+    
+                        
+                        span.prix{
+                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            font-weight: bolder;
+                            padding-left: 14px;
+                            font-size: 16px;
+                            font-style: normal;
+                            margin-top: auto;
+                            color: $orange;
+                            // background-color: red;
+                        }
+                    }
+                    
+                    button.valider{
+                        background-color: $lime;
+                        color: $light;
+                        border: 2px solid $lime;
+                        width: 7vw;
+                        padding: 8px 0px 8px 0px;
+                        float: right;
+                        margin-top: 10px;
+                        margin-right: 30px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        i{
+                            text-decoration: none;
+                            color: $light;
+                        }
+                    }
+                    button.valider:hover{
+                        background-color: $light;
+                        color: $lime;
+                        border: 2px solid $lime;
+                        transition: all 0.6s ease;
+                        i{
+                            text-decoration: none;
+                            color: $lime;
+                        }
+                    }
+            }
+        }
+    }
+}
+
+
