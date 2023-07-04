@@ -265,16 +265,13 @@
         link.addEventListener('click', (event) => {
             event.preventDefault();
 
-            // Appliquer la classe active sur le lien cliqué
             filterLinks.forEach((filterLink) => {
             filterLink.classList.remove('active');
             });
             link.classList.add('active');
 
-            // Récupérer la valeur du filtre
             const filterValue = link.getAttribute('data-filter');
 
-            // Filtrer les éléments en fonction du filtre
             const allElements = document.querySelectorAll('.page__menu__content__card');
             allElements.forEach((element) => {
             if (filterValue === 'all' || element.getAttribute('data-category') === filterValue) {
@@ -284,11 +281,12 @@
             }
             });
 
-            // Faire défiler jusqu'à la section filtrée
             const filteredSection = document.getElementById('filtered-section');
             filteredSection.scrollIntoView({ behavior: 'smooth' });
         });
         });
+
     </script>
+
 </body>
 </html>

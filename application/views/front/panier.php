@@ -33,20 +33,8 @@
                     <td class="quantity">Quantity</td>
                     <td class="total">Total</td>
                 </tr>
-                <tr class="page__facture__detail__corps">
-                    <td class="image"><img src="<?php echo base_url();?>/assets/frontoffice/img/commande/food.jpg" alt="" srcset=""></td>
-                    <td class="nom"> Spaghetti aux fromages</td>
-                    <td class="prix">5 000 Ar</td>
-                    <td class="quantity">
-                        <span class="quantity">
-                            <span class="quantity__button increase"><i class="fas fa-plus"></i></span>
-                                <input type="number" name="quantite" value="1" class="quantity-input" min="1">
-                            <span class="quantity__button decrease"><i class="fas fa-minus"></i></span>
-                        </span>
-                    </td>
-                    <td class="total">5 000 Ar</td>
-                </tr>
 
+            
                 <tr class="page__facture__detail__corps">
                     <td class="image"><img src="<?php echo base_url();?>/assets/frontoffice/img/commande/drink.jpg" alt="" srcset=""></td>
                     <td class="nom">Coca Cola</td>
@@ -102,5 +90,34 @@
             <p><input type="email" name="" id=""> <button>Envoyer</button></p>
         </div>
     </footer>
+
+        <!-- Plus and minus  on html -->
+        <script>
+        const increaseButtons = document.querySelectorAll('.quantity__button.increase');
+        const decreaseButtons = document.querySelectorAll('.quantity__button.decrease');
+        const quantityInputs = document.querySelectorAll('.quantity-input');
+
+        increaseButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            if (quantityInputs[index]) {
+            quantityInputs[index].stepUp();
+            }else{
+            console.error('Quantity input not found for increase button at index:', index);
+            }
+            });
+        });
+
+        decreaseButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            if (quantityInputs[index]) {
+            quantityInputs[index].stepDown();
+            } else {
+            console.error('Quantity input not found for decrease button at index:', index);
+            }
+        });
+        });
+    </script>
+
+
 </body>
 </html>
