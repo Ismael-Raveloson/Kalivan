@@ -18,7 +18,7 @@
             <a href="<?php echo base_url()?>Kalivan/commandeClient" class="navbar__list--links">Commande</a>
             <a href="<?php echo base_url()?>Kalivan/panier" class="navbar__list--links">Panier</a>
             <a href="<?php echo base_url()?>Kalivan/contactClient" class="navbar__list--links">Contact</a>
-            <a href="<?php echo base_url()?>Kalivan/#" class="navbar__list--links">Se déconnecter</a>
+            <a href="<?php echo base_url()?>Kalivan/deconnecter" class="navbar__list--links">Se déconnecter</a>
         </div>
     </header>
 

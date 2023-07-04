@@ -33,162 +33,175 @@
                     </div>
             </div>
 
-            <div class="page__commande__valider" data-category="valid">
-                <div class="page__commande__valider__content" id="section">
-                    <!-- Commande validée -->
-                    <table class="tableau">
-                        <tr class="entete">
-                            <td class="numero">Numéro Facture</td>
-                            <td class="produit">Produit</td>
-                            <td class="quantite">Quantite</td>
-                            <td class="total">Heure de récupération</td>
-                            
-                        </tr>
+            <div class="tableau__bord" data-category="valid" style="display:block;">
+                <div class="tableau__bord__valider" >
+                    <div class="tableau__bord__valider__content" id="section">
+                        <!-- Commande validée -->
+                        <table class="tableau">
+                            <tr class="entete">
+                                <td class="numero">Numéro Facture</td>
+                                <td class="produit">Produit</td>
+                                <td class="quantite">Quantite</td>
+                                <td class="total">Heure de récupération</td>
+                                
+                            </tr>
 
-                        <tr class="corps">
-                            <td class="numero">01</td>
-                            <td class="produit">Spaghetti</td>
-                            <td class="quantite">2</td>
-                            <td class="total">08:54</td>
-                            <td class="annuler"><button><a href="">Annuler</a></button></td>
-                            <td class="cuisine"><button><a href="">Envoyer en cuisine</a></button></td>
-                        </tr>
+                            <tr class="corps">
+                                <td class="numero">01</td>
+                                <td class="produit">Spaghetti</td>
+                                <td class="quantite">2</td>
+                                <td class="total">08:54</td>
+                                <td class="annuler"><button><a href="">Annuler</a></button></td>
+                                <td class="cuisine"><button><a href="">Envoyer en cuisine</a></button></td>
+                            </tr>
 
-                        <tr class="corps">
-                            <td class="numero">02</td>
-                            <td class="produit">Spaghetti</td>
-                            <td class="quantite">2</td>
-                            <td class="total">08:54</td>
-                            <td class="annuler"><button><a href="">Annuler</a></button></td>
-                            <td class="cuisine"><button><a href="">Envoyer en cuisine</a></button></td>
-                        </tr>
+                            <tr class="corps">
+                                <td class="numero">02</td>
+                                <td class="produit">Spaghetti</td>
+                                <td class="quantite">2</td>
+                                <td class="total">08:54</td>
+                                <td class="annuler"><button><a href="">Annuler</a></button></td>
+                                <td class="cuisine"><button><a href="">Envoyer en cuisine</a></button></td>
+                            </tr>
 
-                        <tr class="corps">
-                            <td class="numero">03</td>
-                            <td class="produit">Spaghetti</td>
-                            <td class="quantite">2</td>
-                            <td class="total">08:54</td>
-                            <td class="annuler"><button><a href="">Annuler</a></button></td>
-                            <td class="cuisine"><button><a href="">Envoyer en cuisine</a></button></td>
-                        </tr>
-                    </table>
+                            <tr class="corps">
+                                <td class="numero">03</td>
+                                <td class="produit">Spaghetti</td>
+                                <td class="quantite">2</td>
+                                <td class="total">08:54</td>
+                                <td class="annuler"><button><a href="">Annuler</a></button></td>
+                                <td class="cuisine"><button><a href="">Envoyer en cuisine</a></button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="tableau__bord" data-category="now">
+                <div class="tableau__bord__actuel">
+                    <!-- Commande en cuisine -->
+                    <div class="tableau__bord__actuel__content" id="section">
+                        <table class="tableau">
+                            <tr class="entete">
+                                <td class="numero">Numéro Facture</td>
+                                <td class="produit">Produit</td>
+                                <td class="quantite">Quantite</td>
+                                <td class="total">Heure de récupération</td>
+                                
+                            </tr>
+
+                            <tr class="corps">
+                                <td class="numero">01</td>
+                                <td class="produit">Spaghetti</td>
+                                <td class="quantite">2</td>
+                                <td class="total">08:54</td>
+                                <td class="cuisine"><button><a href="">Envoyer en attente</a></button></td>
+                            </tr>
+
+                            <tr class="corps">
+                                <td class="numero">02</td>
+                                <td class="produit">Spaghetti</td>
+                                <td class="quantite">2</td>
+                                <td class="total">08:54</td>
+                                <td class="cuisine"><button><a href="">Envoyer en attente</a></button></td>
+                            </tr>
+
+                            <tr class="corps">
+                                <td class="numero">03</td>
+                                <td class="produit">Spaghetti</td>
+                                <td class="quantite">2</td>
+                                <td class="total">08:54</td>
+                                <td class="cuisine"><button><a href="">Envoyer en attente</a></button></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
 
-            <div class="page__commande__actuel" data-category="now">
-                <!-- Commande en cuisine -->
-                <div class="page__commande__actuel__content" id="section">
-                    <table class="tableau">
-                        <tr class="entete">
-                            <td class="numero">Numéro Facture</td>
-                            <td class="produit">Produit</td>
-                            <td class="quantite">Quantite</td>
-                            <td class="total">Heure de récupération</td>
-                            
-                        </tr>
 
-                        <tr class="corps">
-                            <td class="numero">01</td>
-                            <td class="produit">Spaghetti</td>
-                            <td class="quantite">2</td>
-                            <td class="total">08:54</td>
-                            <td class="cuisine"><button><a href="">Envoyer en attente</a></button></td>
-                        </tr>
+            <div class="tableau__bord" data-category="wait">
+                <div class="tableau__bord__attente">
+                    <!-- Commande en attente -->
+                    <div class="tableau__bord__actuel__content" id="section">
+                        <table class="tableau">
+                            <tr class="entete">
+                                <td class="numero">Numéro Facture</td>
+                                <td class="produit">Produit</td>
+                                <td class="quantite">Quantite</td>
+                                <td class="total">Heure de récupération</td>
+                                
+                            </tr>
 
-                        <tr class="corps">
-                            <td class="numero">02</td>
-                            <td class="produit">Spaghetti</td>
-                            <td class="quantite">2</td>
-                            <td class="total">08:54</td>
-                            <td class="cuisine"><button><a href="">Envoyer en attente</a></button></td>
-                        </tr>
+                            <tr class="corps">
+                                <td class="numero">01</td>
+                                <td class="produit">Spaghetti</td>
+                                <td class="quantite">2</td>
+                                <td class="total">08:54</td>
+                                <td class="cuisine"><button><a href="">Reçu</a></button></td>
+                            </tr>
 
-                        <tr class="corps">
-                            <td class="numero">03</td>
-                            <td class="produit">Spaghetti</td>
-                            <td class="quantite">2</td>
-                            <td class="total">08:54</td>
-                            <td class="cuisine"><button><a href="">Envoyer en attente</a></button></td>
-                        </tr>
-                    </table>
+                            <tr class="corps">
+                                <td class="numero">02</td>
+                                <td class="produit">Spaghetti</td>
+                                <td class="quantite">2</td>
+                                <td class="total">08:54</td>
+                                <td class="cuisine"><button><a href="">Reçu</a></button></td>
+                            </tr>
+
+                            <tr class="corps">
+                                <td class="numero">03</td>
+                                <td class="produit">Spaghetti</td>
+                                <td class="quantite">2</td>
+                                <td class="total">08:54</td>
+                                <td class="cuisine"><button><a href="">Reçu</a></button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tableau__bord" data-category="done">
+                <div class="tableau__bord__fini" >
+                    <!-- Commande récupérer -->
+                    <div class="tableau__bord__actuel__content" id="section">
+                        <table class="tableau">
+                            <tr class="entete">
+                                <td class="numero">Numéro Facture</td>
+                                <td class="produit">Produit</td>
+                                <td class="quantite">Quantite</td>
+                                <td class="total">Heure de récupération</td>
+                                
+                            </tr>
+
+                            <tr class="corps">
+                                <td class="numero">01</td>
+                                <td class="produit">Spaghetti</td>
+                                <td class="quantite">2</td>
+                                <td class="total">08:54</td>
+                            </tr>
+
+                            <tr class="corps">
+                                <td class="numero">02</td>
+                                <td class="produit">Spaghetti</td>
+                                <td class="quantite">2</td>
+                                <td class="total">08:54</td>
+                            </tr>
+
+                            <tr class="corps">
+                                <td class="numero">03</td>
+                                <td class="produit">Spaghetti</td>
+                                <td class="quantite">2</td>
+                                <td class="total">08:54</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
 
-            <div class="page__commande__attente" data-category="wait">
-                <!-- Commande en attente -->
-                <div class="page__commande__actuel__content" id="section">
-                    <table class="tableau">
-                        <tr class="entete">
-                            <td class="numero">Numéro Facture</td>
-                            <td class="produit">Produit</td>
-                            <td class="quantite">Quantite</td>
-                            <td class="total">Heure de récupération</td>
-                            
-                        </tr>
-
-                        <tr class="corps">
-                            <td class="numero">01</td>
-                            <td class="produit">Spaghetti</td>
-                            <td class="quantite">2</td>
-                            <td class="total">08:54</td>
-                            <td class="cuisine"><button><a href="">Reçu</a></button></td>
-                        </tr>
-
-                        <tr class="corps">
-                            <td class="numero">02</td>
-                            <td class="produit">Spaghetti</td>
-                            <td class="quantite">2</td>
-                            <td class="total">08:54</td>
-                            <td class="cuisine"><button><a href="">Reçu</a></button></td>
-                        </tr>
-
-                        <tr class="corps">
-                            <td class="numero">03</td>
-                            <td class="produit">Spaghetti</td>
-                            <td class="quantite">2</td>
-                            <td class="total">08:54</td>
-                            <td class="cuisine"><button><a href="">Reçu</a></button></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <div class="page__commande__fini" data-category="done">
-                <!-- Commande récupérer -->
-                <div class="page__commande__actuel__content" id="section">
-                    <table class="tableau">
-                        <tr class="entete">
-                            <td class="numero">Numéro Facture</td>
-                            <td class="produit">Produit</td>
-                            <td class="quantite">Quantite</td>
-                            <td class="total">Heure de récupération</td>
-                            
-                        </tr>
-
-                        <tr class="corps">
-                            <td class="numero">01</td>
-                            <td class="produit">Spaghetti</td>
-                            <td class="quantite">2</td>
-                            <td class="total">08:54</td>
-                        </tr>
-
-                        <tr class="corps">
-                            <td class="numero">02</td>
-                            <td class="produit">Spaghetti</td>
-                            <td class="quantite">2</td>
-                            <td class="total">08:54</td>
-                        </tr>
-
-                        <tr class="corps">
-                            <td class="numero">03</td>
-                            <td class="produit">Spaghetti</td>
-                            <td class="quantite">2</td>
-                            <td class="total">08:54</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+            
         </div>
+            
         
     </div>
 
@@ -228,7 +241,7 @@
             const filterValue = link.getAttribute('data-filter');
       
             // Filtrer les éléments en fonction du filtre
-            const allElements = document.querySelectorAll('.tableau');
+            const allElements = document.querySelectorAll('.tableau__bord');
             allElements.forEach((element) => {
               if (filterValue === 'all' || element.getAttribute('data-category') === filterValue) {
                 element.style.display = 'block';

@@ -46,7 +46,7 @@
         }
 
         function getAllPlat(){
-            $sql = "SELECT * FROM Plat p";
+            $sql = "SELECT * FROM Plat WHERE dispo=1";
             $query = $this->db->query($sql);
             foreach($query->result_array() as $row){
                 $valiny[] =  $row;
@@ -146,7 +146,7 @@
         }
 
         function getPlatDuJour(){
-            $sql = "SELECT * FROM v_pdj";
+            $sql = "SELECT * FROM v_pdj WHERE DISPO = 1";
             $query = $this->db->query($sql);
             foreach($query->result_array() as $row){
                 $val[] = $row;

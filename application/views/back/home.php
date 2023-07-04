@@ -14,9 +14,9 @@
             <img src="<?php echo base_url()?>assets/backoffice/img/vert.svg" alt="" srcset="">
         </div>
         <div class="navbar__list">
-        <a href="<?php echo base_url() ?>BackOffice/index" class="navbar__list--links">Acceuil</a>
+            <a href="<?php echo base_url() ?>BackOffice/index" class="navbar__list--links">Acceuil</a>
             <a href="<?php echo base_url() ?>BackOffice/board" class="navbar__list--links">Commande</a>
-            <a href="#" class="navbar__list--links">Statistique</a>
+            <!-- <a href="#" class="navbar__list--links">Statistique</a> -->
         </div>
     </header>
 
@@ -25,7 +25,29 @@
             <h2 class="title">Plat du jour !!</h2>
             <div class="page__platjour__content">
                 <!-- Plat Jour -->
-                <form action="" method="get" class="page__platjour__content__card">
+
+                <?php
+                    foreach ($jour as $row) { ?>
+                        <div class="page__platjour__content__card">
+                            <form action="<?php echo base_url();?>BackOffice/outPlat" method="post">
+                                <img src="<?php echo base_url()?><?php echo $row['PHOTO'] ?>" alt="" srcset="">
+                                <h2><?php echo $row['NOM'] ?></h2>
+                                <p><?php echo $row['INFORMATION'] ?></p>
+                                <div class="page__platjour__content__card__info">
+                                    <span class="prix"><?php echo $row['PRIX'] ?> Ar</span>
+                                    <span class="out">
+                                        <button class="vide"><i class="fas fa-tag"></i> OUT</button>
+                                    </span>
+                                </div>
+                                <input type="hidden" name="idplat" value="<?php echo $row['IDPLAT'] ?>">
+                            </form>   
+
+                                <button type="submit" class="changer"><a href="<?php echo base_url()?>BackOffice/modifJour"><i class="far fa-edit"></i></a> </button>
+                        </div>
+                             
+                <?php } ?>
+
+                <!-- <form action="" method="get" class="page__platjour__content__card">
                     <div>
                         <img src="<?php echo base_url()?>assets/backoffice/img/commande/food.jpg" alt="" srcset="">
                         <h2>Spaghetti aux fromages</h2>
@@ -55,9 +77,9 @@
                         <input type="hidden" name="idplat" value="PLAT1">
                         <button type="submit" class="changer"><i class="far fa-edit"></i></button>
                     </div>
-                </form>
+                </form> -->
 
-                <form action="" method="get" class="page__platjour__content__card">
+                <!-- <form action="" method="get" class="page__platjour__content__card">
                     <div>
                         <img src="<?php echo base_url()?>assets/backoffice/img/commande/food.jpg" alt="" srcset="">
                         <h2>Spaghetti aux fromages</h2>
@@ -71,7 +93,7 @@
                         <input type="hidden" name="idplat" value="PLAT1">
                         <button type="submit" class="changer"><i class="far fa-edit"></i></button>
                     </div>
-                </form>
+                </form> -->
                 
             </div>
         </div>
@@ -82,37 +104,43 @@
         <div class="page__menu">
 
             <div class="page__menu__header">
-                <button class="ajouter"><a href="plat.html"><i class="fas fa-plus"></i> Ajouter plat</a></button>
+                <button class="ajouter"><a href="<?php echo base_url()?>BackOffice/ajout"><i class="fas fa-plus"></i> Ajouter plat</a></button>
                 <h4>MENU</h4>
                     <div class="filter-container">
                         <a href="#" class="filter-link active" data-filter="all">All</a>
-                        <a href="#" class="filter-link" data-filter="vegan">Vegan</a>
-                        <a href="#" class="filter-link" data-filter="local">Local</a>
-                        <a href="#" class="filter-link" data-filter="drinks">Drink</a>
+                        <a href="#" class="filter-link" data-filter="1">Vegan</a>
+                        <a href="#" class="filter-link" data-filter="2">Local</a>
+                        <a href="#" class="filter-link" data-filter="3">Drink</a>
                     </div>
             </div>
             <!-- Menu -->
             <section class="page__menu__content">
 
-                <form action="" method="get" class="page__menu__content__card" data-category="vegan">
-                    <div>
-                        <img src="<?php echo base_url()?>assets/backoffice/img/commande/food.jpg" alt="" srcset="">
-                        <h2>Spaghetti aux fromages</h2>
-                        <p>Dolor quis accusam. Nisl lorem commodo stet lobortis diam sit nonumy rebum ut tation lorem sed.</p>
-                        <div class="page__menu__content__card__info">
-                            <span class="prix"> 5 000 Ar</span>
-                            <span class="quantity">
-                                <span class="out">
-                                    <button class="vide"><i class="fas fa-tag"></i> OUT</button>
-                                </span>
-                            </span>
-                        </div>
-                        <input type="hidden" name="idplat" value="PLAT1">
-                        <button type="submit" class="valider"><a href="#"><i class="far fa-edit"></i></a></button>
+                <?php 
+                    foreach($menu as $row){ ?>
+                    <div class="page__menu__content__card" data-category="<?php echo $row['idCategorie'];?>">
+                        <form action="<?php echo base_url();?>BackOffice/outPlat" method="post" >
+                            
+                                <img src="<?php echo base_url()?><?php echo $row['photo'] ?>" alt="" srcset="">
+                                <h2><?php echo $row['nom'] ?></h2>
+                                <p><?php echo $row['information'] ?></p>
+                                <div class="page__menu__content__card__info">
+                                    <span class="prix"><?php echo $row['prix'] ?> Ar</span>
+                                    <span class="quantity">
+                                        <span class="out">
+                                            <button class="vide"><i class="fas fa-tag"></i> OUT</button>
+                                        </span>
+                                    </span>
+                                </div>
+                                <input type="hidden" name="idplat" value="<?php echo $row['idPlat'] ?>">
+                                <button type="submit" class="valider"><a href="#"><i class="far fa-edit"></i></a></button>
+                        </form>
                     </div>
-                </form>
+                <?php } ?>
 
-                <form action="" method="get" class="page__menu__content__card" data-category="local">
+ 
+
+                <!-- <form action="" method="get" class="page__menu__content__card" data-category="local">
                     <div>
                         <img src="<?php echo base_url()?>assets/backoffice/img/commande/local.jpg" alt="" srcset="">
                         <h2>Kaly local</h2>
@@ -146,9 +174,9 @@
                         <input type="hidden" name="idplat" value="PLAT1">
                         <button type="submit" class="valider"><a href="#"><i class="far fa-edit"></i></a></button>
                     </div>
-                </form>
+                </form> -->
 
-                <form action="" method="get" class="page__menu__content__card" data-category="vegan">
+                <!-- <form action="" method="get" class="page__menu__content__card" data-category="vegan">
                     <div>
                         <img src="<?php echo base_url()?>assets/backoffice/img/commande/food.jpg" alt="" srcset="">
                         <h2>Spaghetti aux fromages</h2>
@@ -182,9 +210,9 @@
                         <input type="hidden" name="idplat" value="PLAT1">
                         <button type="submit" class="valider"><a href="#"><i class="far fa-edit"></i></a></button>
                     </div>
-                </form>
+                </form> -->
 
-                <form action="" method="get" class="page__menu__content__card" data-category="drinks">
+                <!-- <form action="" method="get" class="page__menu__content__card" data-category="drinks">
                     <div>
                         <img src="<?php echo base_url()?>assets/backoffice/img/commande/drink.jpg" alt="" srcset="">
                         <h2>Coca</h2>
@@ -201,7 +229,7 @@
                         <button type="submit" class="valider"><a href="#"><i class="far fa-edit"></i></a></button>
                     </div>
                 </form>
-                
+                 -->
             </section>
         </div>
 

@@ -150,137 +150,61 @@ body {
 .page__commande__header .filter-container .filter-link.active {
   color: #76C090;
 }
-.page__commande__valider {
-  width: 70%;
-  margin: auto auto;
-}
-.page__commande__valider__content .tableau {
-  width: 100%;
-}
-.page__commande__valider__content .tableau .entete {
-  height: 6vh;
-  background-color: rgb(33, 32, 32);
-  color: white;
-  font-size: 13px;
-}
-.page__commande__valider__content .tableau .entete td {
-  padding-left: 20px;
-}
-.page__commande__valider__content .tableau .entete .numero {
-  width: 12%;
-}
-.page__commande__valider__content .tableau .entete .produit {
-  width: 30%;
-}
-.page__commande__valider__content .tableau .entete .prix {
-  width: 20%;
-}
-.page__commande__valider__content .tableau .entete .quantite {
-  width: 12%;
-}
-.page__commande__valider__content .tableau .entete .total {
-  text-align: center;
-  font-weight: 700;
-}
-.page__commande__valider__content .tableau .corps {
-  height: 6vh;
-  font-size: 15px;
-}
-.page__commande__valider__content .tableau .corps td {
-  background-color: whitesmoke;
-  padding-left: 20px;
-}
-.page__commande__valider__content .tableau .corps .numero {
-  font-size: 15px;
-  font-weight: 600;
-}
-.page__commande__valider__content .tableau .corps .total {
-  text-align: center;
-  font-weight: 700;
-}
-.page__commande__valider__content .tableau .corps .annuler {
-  background-color: transparent;
-}
-.page__commande__valider__content .tableau .corps .annuler button {
-  padding: 8px 6px 8px 6px;
-  width: 6vw;
-  background-color: red;
-  color: white;
-  border: none;
-  border-radius: 8px;
-}
-.page__commande__valider__content .tableau .corps .annuler button a {
-  color: white;
-  text-decoration: none;
-}
-.page__commande__valider__content .tableau .corps .cuisine {
-  background-color: transparent;
-}
-.page__commande__valider__content .tableau .corps .cuisine button {
-  padding: 8px 6px 8px 6px;
-  width: 10vw;
-  background-color: #76C090;
-  color: white;
-  border: none;
-  border-radius: 8px;
-}
-.page__commande__valider__content .tableau .corps .cuisine button a {
-  color: white;
-  text-decoration: none;
-}
-.page__commande__actuel {
+.page__commande .tableau__bord {
   display: none;
+}
+.page__commande .tableau__bord__valider {
   width: 70%;
   margin: auto auto;
 }
-.page__commande__actuel__content .tableau {
+.page__commande .tableau__bord__valider__content .tableau {
   width: 100%;
 }
-.page__commande__actuel__content .tableau .entete {
+.page__commande .tableau__bord__valider__content .tableau .entete {
   height: 6vh;
   background-color: rgb(33, 32, 32);
   color: white;
   font-size: 13px;
 }
-.page__commande__actuel__content .tableau .entete td {
+.page__commande .tableau__bord__valider__content .tableau .entete td {
   padding-left: 20px;
 }
-.page__commande__actuel__content .tableau .entete .numero {
+.page__commande .tableau__bord__valider__content .tableau .entete .numero {
   width: 12%;
 }
-.page__commande__actuel__content .tableau .entete .produit {
+.page__commande .tableau__bord__valider__content .tableau .entete .produit {
   width: 30%;
 }
-.page__commande__actuel__content .tableau .entete .prix {
+.page__commande .tableau__bord__valider__content .tableau .entete .prix {
   width: 20%;
 }
-.page__commande__actuel__content .tableau .entete .quantite {
+.page__commande .tableau__bord__valider__content .tableau .entete .quantite {
   width: 12%;
 }
-.page__commande__actuel__content .tableau .entete .total {
+.page__commande .tableau__bord__valider__content .tableau .entete .total {
   text-align: center;
   font-weight: 700;
 }
-.page__commande__actuel__content .tableau .corps {
+.page__commande .tableau__bord__valider__content .tableau .corps {
   height: 6vh;
   font-size: 15px;
 }
-.page__commande__actuel__content .tableau .corps td {
+.page__commande .tableau__bord__valider__content .tableau .corps td {
   background-color: whitesmoke;
   padding-left: 20px;
 }
-.page__commande__actuel__content .tableau .corps .numero {
+.page__commande .tableau__bord__valider__content .tableau .corps .numero {
   font-size: 15px;
   font-weight: 600;
 }
-.page__commande__actuel__content .tableau .corps .total {
+.page__commande .tableau__bord__valider__content .tableau .corps .total {
   text-align: center;
   font-weight: 700;
 }
-.page__commande__actuel__content .tableau .corps .annuler {
+.page__commande .tableau__bord__valider__content .tableau .corps .annuler {
   background-color: transparent;
 }
-.page__commande__actuel__content .tableau .corps .annuler button {
+.page__commande .tableau__bord__valider__content .tableau .corps .annuler button {
   padding: 8px 6px 8px 6px;
   width: 6vw;
   background-color: red;
@@ -288,14 +212,14 @@ body {
   border: none;
   border-radius: 8px;
 }
-.page__commande__actuel__content .tableau .corps .annuler button a {
+.page__commande .tableau__bord__valider__content .tableau .corps .annuler button a {
   color: white;
   text-decoration: none;
 }
-.page__commande__actuel__content .tableau .corps .cuisine {
+.page__commande .tableau__bord__valider__content .tableau .corps .cuisine {
   background-color: transparent;
 }
-.page__commande__actuel__content .tableau .corps .cuisine button {
+.page__commande .tableau__bord__valider__content .tableau .corps .cuisine button {
   padding: 8px 6px 8px 6px;
   width: 10vw;
   background-color: #76C090;
@@ -303,63 +227,65 @@ body {
   border: none;
   border-radius: 8px;
 }
-.page__commande__actuel__content .tableau .corps .cuisine button a {
+.page__commande .tableau__bord__valider__content .tableau .corps .cuisine button a {
   color: white;
   text-decoration: none;
 }
-.page__commande__attente {
+.page__commande .tableau__bord {
   display: none;
+}
+.page__commande .tableau__bord__actuel {
   width: 70%;
   margin: auto auto;
 }
-.page__commande__attente__content .tableau {
+.page__commande .tableau__bord__actuel__content .tableau {
   width: 100%;
 }
-.page__commande__attente__content .tableau .entete {
+.page__commande .tableau__bord__actuel__content .tableau .entete {
   height: 6vh;
   background-color: rgb(33, 32, 32);
   color: white;
   font-size: 13px;
 }
-.page__commande__attente__content .tableau .entete td {
+.page__commande .tableau__bord__actuel__content .tableau .entete td {
   padding-left: 20px;
 }
-.page__commande__attente__content .tableau .entete .numero {
+.page__commande .tableau__bord__actuel__content .tableau .entete .numero {
   width: 12%;
 }
-.page__commande__attente__content .tableau .entete .produit {
+.page__commande .tableau__bord__actuel__content .tableau .entete .produit {
   width: 30%;
 }
-.page__commande__attente__content .tableau .entete .prix {
+.page__commande .tableau__bord__actuel__content .tableau .entete .prix {
   width: 20%;
 }
-.page__commande__attente__content .tableau .entete .quantite {
+.page__commande .tableau__bord__actuel__content .tableau .entete .quantite {
   width: 12%;
 }
-.page__commande__attente__content .tableau .entete .total {
+.page__commande .tableau__bord__actuel__content .tableau .entete .total {
   text-align: center;
   font-weight: 700;
 }
-.page__commande__attente__content .tableau .corps {
+.page__commande .tableau__bord__actuel__content .tableau .corps {
   height: 6vh;
   font-size: 15px;
 }
-.page__commande__attente__content .tableau .corps td {
+.page__commande .tableau__bord__actuel__content .tableau .corps td {
   background-color: whitesmoke;
   padding-left: 20px;
 }
-.page__commande__attente__content .tableau .corps .numero {
+.page__commande .tableau__bord__actuel__content .tableau .corps .numero {
   font-size: 15px;
   font-weight: 600;
 }
-.page__commande__attente__content .tableau .corps .total {
+.page__commande .tableau__bord__actuel__content .tableau .corps .total {
   text-align: center;
   font-weight: 700;
 }
-.page__commande__attente__content .tableau .corps .annuler {
+.page__commande .tableau__bord__actuel__content .tableau .corps .annuler {
   background-color: transparent;
 }
-.page__commande__attente__content .tableau .corps .annuler button {
+.page__commande .tableau__bord__actuel__content .tableau .corps .annuler button {
   padding: 8px 6px 8px 6px;
   width: 6vw;
   background-color: red;
@@ -367,14 +293,14 @@ body {
   border: none;
   border-radius: 8px;
 }
-.page__commande__attente__content .tableau .corps .annuler button a {
+.page__commande .tableau__bord__actuel__content .tableau .corps .annuler button a {
   color: white;
   text-decoration: none;
 }
-.page__commande__attente__content .tableau .corps .cuisine {
+.page__commande .tableau__bord__actuel__content .tableau .corps .cuisine {
   background-color: transparent;
 }
-.page__commande__attente__content .tableau .corps .cuisine button {
+.page__commande .tableau__bord__actuel__content .tableau .corps .cuisine button {
   padding: 8px 6px 8px 6px;
   width: 10vw;
   background-color: #76C090;
@@ -382,63 +308,65 @@ body {
   border: none;
   border-radius: 8px;
 }
-.page__commande__attente__content .tableau .corps .cuisine button a {
+.page__commande .tableau__bord__actuel__content .tableau .corps .cuisine button a {
   color: white;
   text-decoration: none;
 }
-.page__commande__fini {
+.page__commande .tableau__bord {
   display: none;
+}
+.page__commande .tableau__bord__attente {
   width: 70%;
   margin: auto auto;
 }
-.page__commande__fini__content .tableau {
+.page__commande .tableau__bord__attente__content .tableau {
   width: 100%;
 }
-.page__commande__fini__content .tableau .entete {
+.page__commande .tableau__bord__attente__content .tableau .entete {
   height: 6vh;
   background-color: rgb(33, 32, 32);
   color: white;
   font-size: 13px;
 }
-.page__commande__fini__content .tableau .entete td {
+.page__commande .tableau__bord__attente__content .tableau .entete td {
   padding-left: 20px;
 }
-.page__commande__fini__content .tableau .entete .numero {
+.page__commande .tableau__bord__attente__content .tableau .entete .numero {
   width: 12%;
 }
-.page__commande__fini__content .tableau .entete .produit {
+.page__commande .tableau__bord__attente__content .tableau .entete .produit {
   width: 30%;
 }
-.page__commande__fini__content .tableau .entete .prix {
+.page__commande .tableau__bord__attente__content .tableau .entete .prix {
   width: 20%;
 }
-.page__commande__fini__content .tableau .entete .quantite {
+.page__commande .tableau__bord__attente__content .tableau .entete .quantite {
   width: 12%;
 }
-.page__commande__fini__content .tableau .entete .total {
+.page__commande .tableau__bord__attente__content .tableau .entete .total {
   text-align: center;
   font-weight: 700;
 }
-.page__commande__fini__content .tableau .corps {
+.page__commande .tableau__bord__attente__content .tableau .corps {
   height: 6vh;
   font-size: 15px;
 }
-.page__commande__fini__content .tableau .corps td {
+.page__commande .tableau__bord__attente__content .tableau .corps td {
   background-color: whitesmoke;
   padding-left: 20px;
 }
-.page__commande__fini__content .tableau .corps .numero {
+.page__commande .tableau__bord__attente__content .tableau .corps .numero {
   font-size: 15px;
   font-weight: 600;
 }
-.page__commande__fini__content .tableau .corps .total {
+.page__commande .tableau__bord__attente__content .tableau .corps .total {
   text-align: center;
   font-weight: 700;
 }
-.page__commande__fini__content .tableau .corps .annuler {
+.page__commande .tableau__bord__attente__content .tableau .corps .annuler {
   background-color: transparent;
 }
-.page__commande__fini__content .tableau .corps .annuler button {
+.page__commande .tableau__bord__attente__content .tableau .corps .annuler button {
   padding: 8px 6px 8px 6px;
   width: 6vw;
   background-color: red;
@@ -446,14 +374,14 @@ body {
   border: none;
   border-radius: 8px;
 }
-.page__commande__fini__content .tableau .corps .annuler button a {
+.page__commande .tableau__bord__attente__content .tableau .corps .annuler button a {
   color: white;
   text-decoration: none;
 }
-.page__commande__fini__content .tableau .corps .cuisine {
+.page__commande .tableau__bord__attente__content .tableau .corps .cuisine {
   background-color: transparent;
 }
-.page__commande__fini__content .tableau .corps .cuisine button {
+.page__commande .tableau__bord__attente__content .tableau .corps .cuisine button {
   padding: 8px 6px 8px 6px;
   width: 10vw;
   background-color: #76C090;
@@ -461,7 +389,88 @@ body {
   border: none;
   border-radius: 8px;
 }
-.page__commande__fini__content .tableau .corps .cuisine button a {
+.page__commande .tableau__bord__attente__content .tableau .corps .cuisine button a {
+  color: white;
+  text-decoration: none;
+}
+.page__commande .tableau__bord {
+  display: none;
+}
+.page__commande .tableau__bord__fini {
+  width: 70%;
+  margin: auto auto;
+}
+.page__commande .tableau__bord__fini__content .tableau {
+  width: 100%;
+}
+.page__commande .tableau__bord__fini__content .tableau .entete {
+  height: 6vh;
+  background-color: rgb(33, 32, 32);
+  color: white;
+  font-size: 13px;
+}
+.page__commande .tableau__bord__fini__content .tableau .entete td {
+  padding-left: 20px;
+}
+.page__commande .tableau__bord__fini__content .tableau .entete .numero {
+  width: 12%;
+}
+.page__commande .tableau__bord__fini__content .tableau .entete .produit {
+  width: 30%;
+}
+.page__commande .tableau__bord__fini__content .tableau .entete .prix {
+  width: 20%;
+}
+.page__commande .tableau__bord__fini__content .tableau .entete .quantite {
+  width: 12%;
+}
+.page__commande .tableau__bord__fini__content .tableau .entete .total {
+  text-align: center;
+  font-weight: 700;
+}
+.page__commande .tableau__bord__fini__content .tableau .corps {
+  height: 6vh;
+  font-size: 15px;
+}
+.page__commande .tableau__bord__fini__content .tableau .corps td {
+  background-color: whitesmoke;
+  padding-left: 20px;
+}
+.page__commande .tableau__bord__fini__content .tableau .corps .numero {
+  font-size: 15px;
+  font-weight: 600;
+}
+.page__commande .tableau__bord__fini__content .tableau .corps .total {
+  text-align: center;
+  font-weight: 700;
+}
+.page__commande .tableau__bord__fini__content .tableau .corps .annuler {
+  background-color: transparent;
+}
+.page__commande .tableau__bord__fini__content .tableau .corps .annuler button {
+  padding: 8px 6px 8px 6px;
+  width: 6vw;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+.page__commande .tableau__bord__fini__content .tableau .corps .annuler button a {
+  color: white;
+  text-decoration: none;
+}
+.page__commande .tableau__bord__fini__content .tableau .corps .cuisine {
+  background-color: transparent;
+}
+.page__commande .tableau__bord__fini__content .tableau .corps .cuisine button {
+  padding: 8px 6px 8px 6px;
+  width: 10vw;
+  background-color: #76C090;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+.page__commande .tableau__bord__fini__content .tableau .corps .cuisine button a {
   color: white;
   text-decoration: none;
 }/*# sourceMappingURL=commande.css.map */

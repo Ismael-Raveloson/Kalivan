@@ -70,6 +70,12 @@
             $this->load->view('front/facture.php',$data);
         }
 
+        public function deconnecter(){
+            // vonona ny session
+            $this->load->helper('url');
+            $this->load->view('front/login.php');
+        }
+
         public function client(){
             $this->load->helper('url');
             $this->load->library('session');    
@@ -139,7 +145,7 @@
             }else{
                 if($val == true && $valAdmin == true){
                     $this->session->set_userdata('idClient',$idClient);
-                    $this->load->view('backoff/index.php');
+                    redirect(base_url('BackOffice/index'));
                 }else{
                     $error = "Email ou Mot de passe incorrect";
                     redirect(base_url('Kalivan/sign?error='.$error));    
