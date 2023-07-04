@@ -36,6 +36,10 @@
             $this->load->view('front/facture.php');
         }
 
+        public function commandePlat(){
+            
+        }
+
 
     }
 ?>
