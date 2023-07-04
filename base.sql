@@ -58,16 +58,16 @@ create or replace view PanierSomme as (select idUtilisateur,sum(prix*quantite)
 	group by idUtilisateur
 );
 
-create table Commande(
-	idCommande int AUTO_INCREMENT primary key,
-	idUtilisateur int,
-	lieuRecuperation varchar(80),
-	heureRecuperation time,
-	numeroCarte varchar(40),
-	numeroMobileMoney varchar(40),
-	montantPanier double,
-	foreign key (idUtilisateur) references Utilisateur(idUtilisateur)
+CREATE TABLE COMMANDE(
+    IDCOMMANDE INT AUTO_INCREMENT PRIMARY KEY,
+    IDUTILISATEUR INT,
+    LIEURECUPERATION VARCHAR(40),
+    HEURERECUPERATION TIME,
+    NUMEROCARTE VARCHAR(40),
+    NUMEROMOBILEMONEY VARCHAR(40),
+    MONTANT INT
 );
+
 
 create table Etat(
 	idEtat int AUTO_INCREMENT primary key,
@@ -79,18 +79,13 @@ insert into Etat values (null,"En cuisine");
 insert into Etat values (null,"En attente");
 insert into Etat values (null,"Reçu");
 
-create table CommandeEtat(
-	idCommande int,
-	idEtat int,
-	foreign key (idCommande) references Commande(idCommande),
-	foreign key (idEtat) references Etat(idEtat)
+CREATE TABLE DETAILCOMMANDE(
+    IDDETAIL INT AUTO_INCREMENT PRIMARY KEY,
+    IDCOMMANDE INT,
+    IDPLAT INT,
+    QUANTITE INT,
+    ETAT INT,
+    FOREIGN KEY (IDCOMMANDE) REFERENCES COMMANDE (IDCOMMANDE),
+    FOREIGN KEY (IDPLAT) REFERENCES PLAT (IDPLAT),
+    FOREIGN KEY (ETAT) REFERENCES ETAT (IDETAT)
 );
-
-create or replace view CommandeDetails(select Commande.idCommande,Utilisateur.nom,Utilisateur.contact,lieuRecuperation,heureRecuperation,numeroCarte,numeroMobileMoney,montantPanier,Etat.idEtat
-	from Commande 
-	join CommandeEtat on CommandeEtat.idCommande = Commande.idCommande
-	join Utilisateur on Commande.idUtilisateur = Utilisateur.idUtilisateur
-	join Etat on CommandeEtat.idEtat = Etat.idEtat
-	where Commande.idCommande = CommandeEtat.idCommande
-);
-
