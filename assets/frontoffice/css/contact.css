@@ -1,0 +1,407 @@
+/*
+Copyright (c) 2007, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.2.2
+*/
+/* for all templates and grids */
+body{text-align:center;}
+#ft{clear:both;}
+/**/
+/* 750 centered, and backward compatibility */ 
+#doc,#doc2,#doc3,.yui-t1,.yui-t2,.yui-t3,.yui-t4,.yui-t5,.yui-t6,.yui-t7 {
+	margin:auto;text-align:left;
+	width:57.69em;*width:56.3em;min-width:750px;}
+/* 950 centered */ 
+#doc2 {
+	width:73.074em;*width:71.313em;min-width:950px;}
+/* 100% with 10px viewport side matting */ 
+#doc3 {
+	margin:auto 10px; /* not for structure, but so content doesn't bleed to edge */
+	width:auto;}
+	
+/* below required for all fluid grids; adjust widths and margins above accordingly */
+
+	/* to preserve source-order independence for Gecko */
+	.yui-b{position:relative;}
+	.yui-b{_position:static;} /* for IE < 7 */
+	#yui-main .yui-b{position:static;} 
+
+#yui-main {width:100%;}
+.yui-t1 #yui-main,
+.yui-t2 #yui-main,
+.yui-t3 #yui-main{float:right;margin-left:-25em;/* IE: preserve layout at narrow widths */}
+
+.yui-t4 #yui-main,
+.yui-t5 #yui-main,
+.yui-t6 #yui-main{float:left;margin-right:-25em;/* IE: preserve layout at narrow widths */}
+
+.yui-t1 .yui-b {
+	float:left;
+    width:12.3207em;*width:12.0106em;}
+.yui-t1 #yui-main .yui-b{
+    margin-left:13.3207em;*margin-left:13.0106em;
+}
+
+.yui-t2 .yui-b {
+	float:left;
+    width:13.8456em;*width:13.512em;}
+.yui-t2 #yui-main .yui-b {
+    margin-left:14.8456em;*margin-left:14.512em;
+}
+
+.yui-t3 .yui-b {
+	float:left;
+    width:23.0759em;*width:22.52em;}
+.yui-t3 #yui-main .yui-b {
+    margin-left:24.0759em;*margin-left:23.52em;
+}
+
+.yui-t4 .yui-b {
+	float:right;
+    width:13.8456em;*width:13.512em;}
+.yui-t4 #yui-main .yui-b {
+    margin-right:14.8456em;*margin-right:14.512em;
+}
+
+.yui-t5 .yui-b {
+	float:right;
+    width:18.4608em;*width:18.016em;}
+.yui-t5 #yui-main .yui-b {
+    margin-right:19.4608em;*margin-right:19.016em;
+}
+
+.yui-t6 .yui-b {
+	float:right;
+    width:23.0759em;*width:22.52em;}
+.yui-t6 #yui-main .yui-b {
+    margin-right:24.0759em;*margin-right:23.52em;
+}
+
+.yui-t7 #yui-main .yui-b {
+	display:block;margin:0 0 1em 0;
+}
+#yui-main .yui-b {float:none;width:auto;}
+/* grilles de disposition */
+.yui-g .yui-u, 
+.yui-g .yui-g, 
+.yui-gc .yui-u,
+.yui-gc .yui-g .yui-u,
+.yui-ge .yui-u, 
+.yui-gf .yui-u{float:right;display:inline;}
+.yui-g div.first, 
+.yui-gc div.first,
+.yui-gc div.first div.first,
+.yui-gd div.first, 
+.yui-ge div.first, 
+.yui-gf div.first{float:left;}
+.yui-g .yui-u, 
+.yui-g .yui-g{width:49.1%;}
+.yui-g .yui-g .yui-u,
+.yui-gc .yui-g .yui-u {width:48.1%;}
+.yui-gb .yui-u, 
+.yui-gc .yui-u, 
+.yui-gd .yui-u{float:left;margin-left:2%;*margin-left:1.895%;width:32%;}
+.yui-gb div.first, 
+.yui-gc div.first, 
+.yui-gd div.first{margin-left:0;}
+.yui-gc div.first, 
+.yui-gd .yui-u{width:66%;}
+.yui-gd div.first{width:32%;}
+.yui-ge .yui-u{width:24%;}
+.yui-ge div.first, 
+.yui-gf .yui-u{width:74.2%;}
+.yui-gf div.first{width:24%;}
+.yui-ge div.first{width:74.2%;}
+#bd:after,
+.yui-g:after, 
+.yui-gb:after, 
+.yui-gc:after, 
+.yui-gd:after, 
+.yui-ge:after, 
+.yui-gf:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#bd,
+.yui-g, 
+.yui-gb, 
+.yui-gc, 
+.yui-gd, 
+.yui-ge, 
+.yui-gf{zoom:1;}
+
+
+/* fin grilles de disposition */
+
+#header{
+	height:100px;
+	background-color:#F3F2ED;
+	margin:0;
+	padding:0;
+	}
+	
+#header h1{
+	font-size:1em;
+	margin:0;
+	padding:10px;
+	}
+	
+#header h1 a{
+	color:#000000;
+	background-color:#F3F2ED;
+	}
+	
+/* .yui-u .content{
+	background: rgb(31, 31, 31);
+    border-radius: 10%;
+}	 */
+.content{
+	height:300px;
+	background:#242424;
+	background-color: #242424;
+	border-top:#FFFFFF 2px solid;
+	margin:0;
+	padding:0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	border-radius: 10%;	
+}
+	
+#secondary{
+	height:400px;
+	background:#F6F0E0;
+	border-top:#FFFFFF 2px solid;
+	margin:0;
+	padding:0;
+	}
+	
+#secondaryFull{
+	height:50px;
+	background-color:#CFB59F;
+	border-top:#FFFFFF 2px solid;
+	margin:0;
+	padding:0;
+	}
+	
+#footer{
+	height:50px;
+	background:#BFBD93;
+	border-top:#FFFFFF 2px solid;
+	margin:0;
+	padding:0;
+	}
+
+
+	/*nous Contacter*/
+	.content {
+		background-color: #f2f2f2;
+		padding: 20px;
+		border-radius: 5px;
+	  }
+	  
+	  .main_form {
+		margin-top: 20px;
+	  }
+	  
+	  .titre {
+		text-align: center;
+		margin-bottom: 20px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-size: 200%;
+	  }
+	  
+	  .form-control {
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 10px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+	  }
+	  
+	  .textarea {
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 10px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		resize: vertical;
+	  }
+	  
+	  .send {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		background-color: #F39121;
+		color: #fff;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: 0.3s;
+	  }
+	  
+	  .send:hover {
+		background-color: #a85e09;
+	  }
+	  
+	/*fin nous contacter*/
+
+	/*info*/
+	.yui-u .info{
+		text-align: center;
+		font-size: 150%;
+		font-weight: bold;
+	}
+	.yui-u .mail a{
+		text-decoration: none;
+		color: #242424;
+	}
+
+	.yui-u .mail a:hover{
+		color: #0092be;
+		transition: 0.3s;
+	}
+
+	.yui-u .numero a{
+		text-decoration: none;
+		color: #242424;
+	}
+
+	.yui-u .numero a:hover{
+		color: #0092be;
+		transition: 0.3s;
+	}
+
+	.horaire-ouverture .ouverture p{
+		font-weight: bold;
+
+	}
+
+	/* .reseaux-sociaux .social-icon{
+		margin-left: 91%;
+	}
+
+	.reseaux-sociaux .twitter{
+		margin-left: 150%;
+	} */
+
+	/*fin info*/
+
+	  /*localisation*/
+	  
+	  .yui-b .localisation{
+		margin: auto;
+	  }
+	  .yui-b .localisation p{
+		text-align: center;
+		font-size: 200%;
+		font-weight: bold;
+	  }
+
+	  #secondary {
+		position: relative;
+		height: 400px; /* Hauteur fixe du conteneur */
+		overflow: auto;
+	  }
+	  
+	  #map {
+		height: 400px;
+    	width: 100%;
+		/* margin-top: -11%;
+		margin-right: -1%; */
+	}
+    
+	  /*fin localisation*/
+
+	  /*notre equipe*/
+
+	  .container {
+		display: grid;
+		grid-template-columns: 30% 30% 30%;
+		column-gap: 40px;
+		/* padding: 5px; */
+	  }
+  
+	  .box {
+		width: 200px;
+		height: 200px;
+		background-color: #f2f2f2;
+		border: 1px solid #ccc;
+		border-radius: 10%;
+		margin-top: 20%;
+		padding: 20px;
+		text-align: center;
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+	  }
+
+	.fa-palette:before {
+		font-size: 16px;
+		margin-right: 8px;
+	}
+
+
+	.fa-laptop-code:before {
+		font-size: 16px;
+		margin-right: 8px;
+	}
+
+	.fa-bullhorn:before {
+		font-size: 16px;
+		margin-right: 8px;
+	}
+
+	.container > div {
+		width: 18vw; 
+		/* margin-left: 20px; /* Augmentez cette valeur pour augmenter l'espacement entre les div */
+		/* margin-right: 20px; Augmentez cette valeur pour augmenter l'espacement entre les div   */ */
+	}
+
+.equipe p{
+	text-align: center;
+	font-size: 200%;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: bold;
+	margin-top: 20%;
+}
+
+.box h4 {
+	color: #333333;
+  }
+  
+  .box p {
+	color: #666666;
+	font-size: 78%;
+  }
+  
+  .box i {
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: #0099ff;
+  }
+	  /*fin notre equipe*/
+
+
+	  @media screen and (max-width: 768px) {
+		.footer__info {
+		  flex-direction: column;
+		}
+	  
+		.footer__info__media {
+		  margin-top: 10px;
+		}
+	  
+		.textarea-responsive {
+		  height: 60px; /* Ajustez la hauteur du textarea pour les écrans kely*/
+		}
+	  }
+	  
+	  @media screen and (max-width: 480px) {
+		.footer__info {
+		  align-items: center;
+		}
+	  
+		.textarea-responsive {
+		  height: 40px; /* Ajustez la hauteur du textarea pour les écrans kely kely */
+		}
+	  }
+	  
+
+
+	  
