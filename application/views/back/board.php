@@ -16,7 +16,6 @@
         <div class="navbar__list">
             <a href="<?php echo base_url() ?>BackOffice/index" class="navbar__list--links">Acceuil</a>
             <a href="<?php echo base_url() ?>BackOffice/board" class="navbar__list--links">Commande</a>
-            <a href="#" class="navbar__list--links">Statistique</a>
         </div>
     </header>
 
@@ -46,32 +45,18 @@
                                 
                             </tr>
 
-                            <tr class="corps">
-                                <td class="numero">01</td>
-                                <td class="produit">Spaghetti</td>
-                                <td class="quantite">2</td>
-                                <td class="total">08:54</td>
-                                <td class="annuler"><button><a href="">Annuler</a></button></td>
-                                <td class="cuisine"><button><a href="">Envoyer en cuisine</a></button></td>
-                            </tr>
-
-                            <tr class="corps">
-                                <td class="numero">02</td>
-                                <td class="produit">Spaghetti</td>
-                                <td class="quantite">2</td>
-                                <td class="total">08:54</td>
-                                <td class="annuler"><button><a href="">Annuler</a></button></td>
-                                <td class="cuisine"><button><a href="">Envoyer en cuisine</a></button></td>
-                            </tr>
-
-                            <tr class="corps">
-                                <td class="numero">03</td>
-                                <td class="produit">Spaghetti</td>
-                                <td class="quantite">2</td>
-                                <td class="total">08:54</td>
-                                <td class="annuler"><button><a href="">Annuler</a></button></td>
-                                <td class="cuisine"><button><a href="">Envoyer en cuisine</a></button></td>
-                            </tr>
+                            <?php
+                                foreach ($valider as $row) { ?>   
+                                    <tr class="corps">
+                                        <td class="numero"><?php echo $row['IDCOMMANDE']; ?></td>
+                                        <td class="produit"><?php echo $row['NOM']; ?></td>
+                                        <td class="quantite"><?php echo $row['QUANTITE']; ?></td>
+                                        <td class="total"><?php echo $row['HEURERECUPERATION']; ?></td>
+                                        <td class="annuler"><button><a href="<?php echo base_url();?>BackOffice/annulerDetail?idDetail=<?php echo $row['IDDETAIL']; ?>">Annuler</a></button></td>
+                                        <td class="cuisine"><button><a href="<?php echo base_url();?>BackOffice/sendCuisine?idDetail=<?php echo $row['IDDETAIL']; ?>">Envoyer en cuisine</a></button></td>
+                                    </tr>
+                            <?php } ?>
+                            
                         </table>
                     </div>
                 </div>
@@ -91,29 +76,17 @@
                                 
                             </tr>
 
-                            <tr class="corps">
-                                <td class="numero">01</td>
-                                <td class="produit">Spaghetti</td>
-                                <td class="quantite">2</td>
-                                <td class="total">08:54</td>
-                                <td class="cuisine"><button><a href="">Envoyer en attente</a></button></td>
-                            </tr>
+                            <?php
+                                foreach ($cuisine as $row) { ?>   
+                                    <tr class="corps">
+                                        <td class="numero"><?php echo $row['IDCOMMANDE']; ?></td>
+                                        <td class="produit"><?php echo $row['NOM']; ?></td>
+                                        <td class="quantite"><?php echo $row['QUANTITE']; ?></td>
+                                        <td class="total"><?php echo $row['HEURERECUPERATION']; ?></td>
+                                        <td class="cuisine"><button><a href="<?php echo base_url();?>BackOffice/sendAttente?idDetail=<?php echo $row['IDDETAIL']; ?>">Envoyer en attente</a></button></td>
+                                    </tr>
+                            <?php } ?>
 
-                            <tr class="corps">
-                                <td class="numero">02</td>
-                                <td class="produit">Spaghetti</td>
-                                <td class="quantite">2</td>
-                                <td class="total">08:54</td>
-                                <td class="cuisine"><button><a href="">Envoyer en attente</a></button></td>
-                            </tr>
-
-                            <tr class="corps">
-                                <td class="numero">03</td>
-                                <td class="produit">Spaghetti</td>
-                                <td class="quantite">2</td>
-                                <td class="total">08:54</td>
-                                <td class="cuisine"><button><a href="">Envoyer en attente</a></button></td>
-                            </tr>
                         </table>
                     </div>
                 </div>
@@ -133,29 +106,18 @@
                                 
                             </tr>
 
-                            <tr class="corps">
-                                <td class="numero">01</td>
-                                <td class="produit">Spaghetti</td>
-                                <td class="quantite">2</td>
-                                <td class="total">08:54</td>
-                                <td class="cuisine"><button><a href="">Reçu</a></button></td>
-                            </tr>
+                            <?php
+                                foreach ($attente as $row) { ?>   
+                                    <tr class="corps">
+                                        <td class="numero"><?php echo $row['IDCOMMANDE']; ?></td>
+                                        <td class="produit"><?php echo $row['NOM']; ?></td>
+                                        <td class="quantite"><?php echo $row['QUANTITE']; ?></td>
+                                        <td class="total"><?php echo $row['HEURERECUPERATION']; ?></td>
+                                        <td class="cuisine"><button><a href="<?php echo base_url();?>BackOffice/sendRecu?idDetail=<?php echo $row['IDDETAIL']; ?>">Reçu</a></button></td>
+                                    </tr>
+                            <?php } ?>
 
-                            <tr class="corps">
-                                <td class="numero">02</td>
-                                <td class="produit">Spaghetti</td>
-                                <td class="quantite">2</td>
-                                <td class="total">08:54</td>
-                                <td class="cuisine"><button><a href="">Reçu</a></button></td>
-                            </tr>
 
-                            <tr class="corps">
-                                <td class="numero">03</td>
-                                <td class="produit">Spaghetti</td>
-                                <td class="quantite">2</td>
-                                <td class="total">08:54</td>
-                                <td class="cuisine"><button><a href="">Reçu</a></button></td>
-                            </tr>
                         </table>
                     </div>
                 </div>
@@ -173,27 +135,15 @@
                                 <td class="total">Heure de récupération</td>
                                 
                             </tr>
-
-                            <tr class="corps">
-                                <td class="numero">01</td>
-                                <td class="produit">Spaghetti</td>
-                                <td class="quantite">2</td>
-                                <td class="total">08:54</td>
-                            </tr>
-
-                            <tr class="corps">
-                                <td class="numero">02</td>
-                                <td class="produit">Spaghetti</td>
-                                <td class="quantite">2</td>
-                                <td class="total">08:54</td>
-                            </tr>
-
-                            <tr class="corps">
-                                <td class="numero">03</td>
-                                <td class="produit">Spaghetti</td>
-                                <td class="quantite">2</td>
-                                <td class="total">08:54</td>
-                            </tr>
+                            <?php
+                                foreach ($recu as $row) { ?>   
+                                    <tr class="corps">
+                                        <td class="numero"><?php echo $row['IDCOMMANDE']; ?></td>
+                                        <td class="produit"><?php echo $row['NOM']; ?></td>
+                                        <td class="quantite"><?php echo $row['QUANTITE']; ?></td>
+                                        <td class="total"><?php echo $row['HEURERECUPERATION']; ?></td>
+                                    </tr>
+                            <?php } ?>
                         </table>
                     </div>
                 </div>

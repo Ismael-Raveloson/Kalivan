@@ -93,6 +93,13 @@
             return $valiny;
         }
 
+        function annulerDetail($idDetail){
+            $sql = "DELETE FROM DETAILCOMMANDE WHERE IDDETAIL = %d";
+            $req = sprintf($sql,$idDetail);
+            // $this->db->query($idDetail); 
+            echo $req;
+        }
+
         function sendCuisine($idDetail){
             $sql = "UPDATE DETAILCOMMANDE SET ETAT = 2 WHERE IDDETAIL=%d";
             $req = sprintf($sql,$req);

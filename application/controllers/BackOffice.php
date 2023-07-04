@@ -23,6 +23,7 @@
             $data = array();
             $data['valider'] = $this->Model->listeCommandeValidée();
             $data['cuisine'] = $this->Model->listeCommandeCuisine();
+            $data['attente'] = $this->Model->listeCommandeAttente();
             $data['recu'] = $this->Model->listeCommandeRecu();
             $this->load->view('back/board.php',$data);
         }
@@ -79,5 +80,37 @@
             redirect(base_url('BackOffice/index'));
         }
 
+        public function annulerDetail(){
+            $this->load->helper('url');
+            $this->load->model('Model');
+            $id =  $this->input->get('idDetail');
+            $this->Model->annulerDetail($id);
+            // redirect(base_url('BackOffice/board'));
+        }
+
+
+        public function sendCuisine(){
+            $this->load->helper('url');
+            $this->load->model('Model');
+            $id = $this->input->get('idDetail');
+            $this->Model->sendCuisine($id);
+            redirect(base_url('BackOffice/board'));
+        }
+
+        public function sendAttente(){
+            $this->load->helper('url');
+            $this->load->model('Model');
+            $id = $this->input->get('idDetail');
+            $this->Model->sendAttente($id);
+            redirect(base_url('BackOffice/board'));
+        }
+
+        public function sendRecu(){
+            $this->load->helper('url');
+            $this->load->model('Model');
+            $id = $this->input->get('idDetail');
+            $this->Model->sendRecu($id);
+            redirect(base_url('BackOffice/board'));
+        }
     }
 ?>
