@@ -11,13 +11,14 @@
 <body>
     <header class="navbar">
         <div class="navbar__logo">
-            <img src="<?php echo base_url()?>assets/frontoffice/img/logo_vert.png" alt="" srcset="">
+        <img src="<?php echo base_url() ?>assets/frontoffice/img/vert.svg" alt="" srcset="">
         </div>
         <div class="navbar__list">
-            <a href="index.html" class="navbar__list--links">Acceuil</a>
-            <a href="commande.html" class="navbar__list--links">Commande</a>
-            <a href="panier.html" class="navbar__list--links">Panier</a>
-            <a href="contact.html" class="navbar__list--links">Contact</a>
+            <a href="<?php echo base_url()?>Kalivan/client" class="navbar__list--links">Accueil</a>
+            <a href="<?php echo base_url()?>Kalivan/commandeClient" class="navbar__list--links">Commande</a>
+            <a href="<?php echo base_url()?>Kalivan/panier" class="navbar__list--links">Panier</a>
+            <a href="<?php echo base_url()?>Kalivan/contact" class="navbar__list--links">Contact</a>
+            <a href="<?php echo base_url()?>Kalivan/contact" class="navbar__list--links">Se déconnecter</a>
         </div>
     </header>
 
@@ -28,24 +29,27 @@
             </div>
             <div class="page__paiement__formulaire">
                 <!-- <h2>Paiement</h2> -->
-                <p>Nom <i class="far fa-user"></i> :<input type="text" name="nom" id=""></p>
+                <!-- <p>Nom <i class="far fa-user"></i> :<input type="text" name="nom" id=""></p>
                 <p>Prenom <i class="far fa-user"></i> : <input type="text" name="prenom" id=""></p>
-                <p>Contact <i class="fas fa-phone"></i> : <input type="text" name="contact" id=""> </p>
-                <p>Lieu de récupération <i class="fas fa-map-marker-alt"></i> : <label for="">Andraharo</label> </p>
-                <input type="hidden" name="place" value="Andraharo">
-                <p>Heure de récupération <i class="fas fa-clock"></i> : <input type="time" name="heure" id=""></p>
-                <p>* Numéro Carte <i class="fab fa-cc-visa"></i> : <input type="text" name="carte" id=""></p>
-                <p>* Numéro Mobile Money <i class="fas fa-money-check"></i> : <input type="text" name="numero" id=""></p>
-                <p><button class="retour"><a href="index.html">Continuer achat</a></button>
-                    <button><a href="facture.html">Payer</a></button></p>
+                <p>Contact <i class="fas fa-phone"></i> : <input type="text" name="contact" id=""> </p> -->
+                <form action="<?php echo base_url()?>Kalivan/validerCommande" method="post">
+                    <p>Lieu de récupération <i class="fas fa-map-marker-alt"></i> : <label for="">Andraharo</label> </p>
+                    <input type="hidden" name="place" value="Andraharo">
+                    <p>Heure de récupération <i class="fas fa-clock"></i> : <input type="time" name="heure" id=""></p>
+                    <p>* Numéro Carte <i class="fab fa-cc-visa"></i> : <input type="text" name="carte" id=""></p>
+                    <p>* Numéro Mobile Money <i class="fas fa-money-check"></i> : <input type="text" name="numero" id=""></p>
+                    <p><button class="retour"><a href="<?php echo base_url('Kalivan/client');?>">Continuer achat</a></button>
+                        <button type="submit">Payer</button></p>
 
-                <div class="icons">
-                    <img src="<?php echo base_url()?>assets/frontoffice/img/icon/mvola.png" alt="" srcset="">
-                    <img src="<?php echo base_url()?>assets/frontoffice/img/icon/orange.png" alt="" srcset="">
-                    <img src="<?php echo base_url()?>assets/frontoffice/img/icon/airtel.png" alt="" srcset="">
-                    <img src="<?php echo base_url()?>assets/frontoffice/img/icon/mc.png" alt="" srcset="">
-                    <img src="<?php echo base_url()?>assets/frontoffice/img/icon/visa.jpg" alt="" srcset="">
-                </div>
+                    <div class="icons">
+                        <img src="<?php echo base_url()?>assets/frontoffice/img/icon/mvola.png" alt="" srcset="">
+                        <img src="<?php echo base_url()?>assets/frontoffice/img/icon/orange.png" alt="" srcset="">
+                        <img src="<?php echo base_url()?>assets/frontoffice/img/icon/airtel.png" alt="" srcset="">
+                        <img src="<?php echo base_url()?>assets/frontoffice/img/icon/mc.png" alt="" srcset="">
+                        <img src="<?php echo base_url()?>assets/frontoffice/img/icon/visa.jpg" alt="" srcset="">
+                    </div>
+                </form>
+                
             </div>
         </div>
 

@@ -129,6 +129,7 @@ body {
 .page {
   width: 100%;
   height: auto;
+  min-height: 90vh;
   padding-top: 90px;
   display: flex;
   flex-direction: column;

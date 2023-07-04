@@ -145,6 +145,7 @@ body {
   height: 95%;
 }
 .page__paiement__formulaire {
+  margin-top: 50px;
   height: 90vh;
 }
 .page__paiement__formulaire h2 {

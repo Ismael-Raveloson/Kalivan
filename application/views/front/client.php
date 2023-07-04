@@ -14,18 +14,17 @@
             <img src="<?php echo base_url() ?>assets/frontoffice/img/vert.svg" alt="" srcset="">
         </div>
         <div class="navbar__list">
-            <a href="<?php echo base_url()?>Kalivan/index" class="navbar__list--links">Accueil</a>
-            <a href="<?php echo base_url()?>Kalivan/commande" class="navbar__list--links">Commande</a>
-            <!-- <a href="<?php echo base_url()?>Kalivan/panier" class="navbar__list--links">Panier</a> -->
-            <a href="<?php echo base_url()?>Kalivan/contact" class="navbar__list--links">Contact</a>
-            <a href="<?php echo base_url()?>Kalivan/sign" class="navbar__list--links">Se connecter</a>
+        <a href="<?php echo base_url()?>Kalivan/client" class="navbar__list--links">Accueil</a>
+            <a href="<?php echo base_url()?>Kalivan/commandeClient" class="navbar__list--links">Commande</a>
+            <a href="<?php echo base_url()?>Kalivan/panier" class="navbar__list--links">Panier</a>
+            <a href="<?php echo base_url()?>Kalivan/contactClient" class="navbar__list--links">Contact</a>
+            <a href="<?php echo base_url()?>Kalivan/#" class="navbar__list--links">Se déconnecter</a>
         </div>
     </header>
 
     <div class="page">
         <div class="page__caroussel">
             <div class="page__caroussel__info">
-                
                 <h1>Who are we ?</h1>
                 
                 <p>Consectetuer dolore vero ea gubergren justo amet wisi et enim 

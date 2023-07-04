@@ -14,10 +14,11 @@
             <img src="<?php echo base_url() ?>assets/frontoffice/img/vert.svg" alt="" srcset="">
         </div>
         <div class="navbar__list">
-            <a href="<?php echo base_url()?>Kalivan/index" class="navbar__list--links">Accueil</a>
-            <a href="<?php echo base_url()?>Kalivan/commande" class="navbar__list--links">Commande</a>
-            <a href="<?php echo base_url()?>Kalivan/contact" class="navbar__list--links">Contact</a>
-            <a href="<?php echo base_url()?>Kalivan/contact" class="navbar__list--links">Se connecter</a>
+        <a href="<?php echo base_url()?>Kalivan/client" class="navbar__list--links">Accueil</a>
+            <a href="<?php echo base_url()?>Kalivan/commandeClient" class="navbar__list--links">Commande</a>
+            <a href="<?php echo base_url()?>Kalivan/panier" class="navbar__list--links">Panier</a>
+            <a href="<?php echo base_url()?>Kalivan/contactClient" class="navbar__list--links">Contact</a>
+            <a href="<?php echo base_url()?>Kalivan/#" class="navbar__list--links">Se déconnecter</a>
         </div>
     </header>
 
@@ -26,7 +27,29 @@
             <h2 class="title">Plat du jour !!</h2>
             <div class="page__platjour__content">
                 <!-- Plat Jour -->
-                <form action="<?php echo base_url()?>Kalivan/sign" method="post" class="page__platjour__content__card">
+                <?php
+                    foreach ($jour as $row) { ?>
+                    <form action="<?php echo base_url()?>Kalivan/insertPanier" method="post" class="page__platjour__content__card">
+                        <div>
+                            <img src="<?php echo base_url()?><?php echo $row['PHOTO']; ?>" alt="" srcset="">
+                            <h2><?php echo $row['NOM']; ?></h2>
+                            <p><?php echo $row['INFORMATION']; ?></p>
+                            <div class="page__platjour__content__card__info">
+                                <span class="prix"><?php echo $row['PRIX']; ?> Ar</span>
+                                <span class="quantity">
+                                    <span class="quantity__button increase"><i class="fas fa-plus"></i></span>
+                                        <input type="number" name="quantite" value="1" class="quantity-input" min="1">
+                                    <span class="quantity__button decrease"><i class="fas fa-minus"></i></span>
+                                </span>
+                            </div>
+                            <input type="hidden" name="idplat" value="<?php echo $row['IDPLAT']; ?>">
+                            <button type="submit" class="valider"><a href="#"><i class="fas fa-cart-arrow-down"></i></a></button>
+                        </div>
+                    </form>         
+                 <?php } ?>
+                
+
+                <!-- <form action="<?php echo base_url()?>Kalivan/sign" method="get" class="page__platjour__content__card">
                     <div>
                         <img src="<?php echo base_url()?>assets/frontoffice/img/commande/food.jpg" alt="" srcset="">
                         <h2>Spaghetti aux fromages</h2>
@@ -60,25 +83,7 @@
                         <input type="hidden" name="idplat" value="PLAT1">
                         <button type="submit" class="valider"><a href="#"><i class="fas fa-cart-arrow-down"></i></a></button>
                     </div>
-                </form>
-
-                <form action="<?php echo base_url()?>Kalivan/sign" method="get" class="page__platjour__content__card">
-                    <div>
-                        <img src="<?php echo base_url()?>assets/frontoffice/img/commande/food.jpg" alt="" srcset="">
-                        <h2>Spaghetti aux fromages</h2>
-                        <p>Dolor quis accusam. Nisl lorem commodo stet lobortis diam sit nonumy rebum ut tation lorem sed.</p>
-                        <div class="page__platjour__content__card__info">
-                            <span class="prix"> 5 000 Ar</span>
-                            <span class="quantity">
-                                <span class="quantity__button increase"><i class="fas fa-plus"></i></span>
-                                    <input type="number" name="quantite" value="1" class="quantity-input" min="1">
-                                <span class="quantity__button decrease"><i class="fas fa-minus"></i></span>
-                            </span>
-                        </div>
-                        <input type="hidden" name="idplat" value="PLAT1">
-                        <button type="submit" class="valider"><a href="#"><i class="fas fa-cart-arrow-down"></i></a></button>
-                    </div>
-                </form>
+                </form> -->
                 
             </div>
         </div>
@@ -99,14 +104,14 @@
 
             <?php 
                 foreach($produit as $row){ ?>
-                    <form action="<?php echo base_url()?>Kalivan/sign" method="get" class="page__menu__content__card" data-category="<?php echo $row['idCategorie'];?>">
+                    <form action="<?php echo base_url()?>Kalivan/insertPanier" method="post" class="page__menu__content__card" data-category="<?php echo $row['idCategorie'];?>">
                     <div>
                         <img src="<?php echo base_url()?><?php echo $row['photo']; ?>" alt="" srcset="">
                         <h2><?php echo $nom = iconv('UTF-8', 'ASCII//TRANSLIT',$row['nom']); ?></h2>
                         <?php  ?>
                         <p><?php echo $row['information']; ?></p>
                         <div class="page__menu__content__card__info">
-                            <span class="prix"> <?php echo $row['prix']; ?></span>
+                            <span class="prix"> <?php echo $row['prix']; ?> Ar</span>
                             <span class="quantity">
                                 <span class="quantity__button increase"><i class="fas fa-plus"></i></span>
                                     <input type="number" name="quantite" value="1" class="quantity-input" min="1">

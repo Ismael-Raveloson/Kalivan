@@ -11,14 +11,14 @@
 <body>
     <header class="navbar">
         <div class="navbar__logo">
-            <img src="<?php echo base_url();?>/assets/frontoffice/img/logo_vert.png" alt="" srcset="">
+        <img src="<?php echo base_url() ?>assets/frontoffice/img/vert.svg" alt="" srcset="">
         </div>
         <div class="navbar__list">
-            <a href="<?php echo base_url()?>Kalivan/index" class="navbar__list--links">Accueil</a>
-            <a href="<?php echo base_url()?>Kalivan/commande" class="navbar__list--links">Commande</a>
+            <a href="<?php echo base_url()?>Kalivan/client" class="navbar__list--links">Accueil</a>
+            <a href="<?php echo base_url()?>Kalivan/commandeClient" class="navbar__list--links">Commande</a>
             <a href="<?php echo base_url()?>Kalivan/panier" class="navbar__list--links">Panier</a>
-            <a href="<?php echo base_url()?>Kalivan/contact" class="navbar__list--links">Contact</a>
-            <a href="<?php echo base_url()?>Kalivan/sign" class="navbar__list--links">Se connecter</a>
+            <a href="<?php echo base_url()?>Kalivan/contactClient" class="navbar__list--links">Contact</a>
+            <a href="<?php echo base_url()?>Kalivan/#" class="navbar__list--links">Se déconnecter</a>
         </div>
     </header>
 
@@ -32,24 +32,42 @@
                     <td class="prix">Price</td>
                     <td class="quantity">Quantity</td>
                     <td class="total">Total</td>
+                    <td class="supprimer"></td>
                 </tr>
 
-            
-                <tr class="page__facture__detail__corps">
-                    <td class="image"><img src="<?php echo base_url();?>/assets/frontoffice/img/commande/drink.jpg" alt="" srcset=""></td>
-                    <td class="nom">Coca Cola</td>
-                    <td class="prix">5 000 Ar</td>
-                    <td class="quantity">
-                        <span class="quantity">
-                            <span class="quantity__button increase"><i class="fas fa-plus"></i></span>
-                                <input type="number" name="quantite" value="1" class="quantity-input" min="1">
-                            <span class="quantity__button decrease"><i class="fas fa-minus"></i></span>
-                        </span>
-                    </td>
-                    <td class="total">5 000 Ar</td>
-                </tr>
+            <?php 
+                if($panier != null){
+                    foreach($panier as $row){ ?>
+                            <tr class="page__facture__detail__corps">
+                                <td class="image"><img src="<?php echo base_url();?><?php echo $row['photo'];?>" alt="" srcset=""></td>
+                                <td class="nom"><?php echo $row['nom'];?></td>
+                                <td class="prix"><?php echo $row['prix'];?> Ar</td>
+                                <td class="quantity">
+                                    <span class="quantity">
+                                        <!-- <span class="quantity__button increase"><i class="fas fa-plus"></i></span> -->
+                                           <span> <?php echo $row['quantite'];?></span>
+                                        <!-- <span class="quantity__button decrease"><i class="fas fa-minus"></i></span> -->
+                                    </span>
+                                </td>
+                                <td class="total"><?php 
+                                    $q=$row['quantite'];
+                                    $p= $row['prix'];
+                                    echo $p*$q;
+                                ?> Ar</td>
+                                <form action="<?php echo base_url() ?>Kalivan/deleteFromPanier" method="post">
+                                    <td class="supprimer">
+                                        <input type="hidden" name="idPlat" value="<?php echo $row['idPlat'];?>">
+                                        <input type="submit" value="Supprimer">
+                                    </td>
+                                </form>
+                                
+                            </tr>
+        
+                    <?php  } ?>
+               <?php } ?>  
+                
 
-                <tr class="page__facture__detail__corps">
+                <!-- <tr class="page__facture__detail__corps">
                     <td class="image"><img src="<?php echo base_url();?>/assets/frontoffice/img/commande/local.jpg" alt="" srcset=""></td>
                     <td class="nom">Local</td>
                     <td class="prix">5 000 Ar</td>
@@ -61,12 +79,12 @@
                         </span>
                     </td>
                     <td class="total">5 000 Ar</td>
-                </tr>
+                </tr> -->
                 <tr class="page__facture__detail__pied">
                     <td class="image"></td>
                     <td class="nom"></td>
                     <td class="prix"></td>
-                    <td class="panier"><button class="valider">Valider Panier <i class="fas fa-cart-arrow-down"></i></button></td>
+                    <td class="panier"><button class="valider"><a href="<?php echo base_url()?>Kalivan/paiement">Valider Panier</a><i class="fas fa-cart-arrow-down"></i></button></td>
                 </tr>
             </table>
         </div>

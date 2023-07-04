@@ -11,7 +11,7 @@
 <body>
     <header class="navbar">
         <div class="navbar__logo">
-            <img src="<?php echo base_url()?>assets/backoffice/img/logo_vert.png" alt="" srcset="">
+            <img src="<?php echo base_url()?>assets/backoffice/img/vert.svg" alt="" srcset="">
         </div>
         <div class="navbar__list">
             <a href="<?php echo base_url() ?>BackOffice/index" class="navbar__list--links">Acceuil</a>

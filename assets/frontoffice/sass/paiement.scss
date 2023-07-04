@@ -6,6 +6,7 @@
     width: 100%;
     height: auto;
     padding-top: 90px;
+    
     &__paiement{
         margin: auto auto;
         width: 70%;
@@ -23,7 +24,9 @@
 
         }
         &__formulaire{
+            margin-top: 50px;
             height: 90vh;
+
             // margin: auto auto;
 
             h2{

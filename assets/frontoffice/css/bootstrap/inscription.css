@@ -7,7 +7,7 @@
     margin-top: 100px;
     margin-bottom: 40px;
     margin-left: 120px;
-    color: #009394;
+    color: #76C090;
 }
 
 .container{
@@ -15,9 +15,11 @@
 }
 
 .container .row{
-    background-color:rgb(245, 245, 245);
+    margin: auto auto;
+    background-color:white;
+    box-shadow: 0 2px 10px rgba(53, 53, 53, 0.2);
     border-radius: 30px;
-    width: 1000px;
+    width: 60vw;
 }
 
 .img-responsive{
@@ -29,25 +31,25 @@
 
 #username{
     width: 300px;
-    border: 1px solid #009394;
+    border: 1px solid #76C090;
     background-color: white;
 }
 
 #email{
     width: 300px;
-    border: 1px solid #009394;
+    border: 1px solid #76C090;
     background-color: white;
 }
 
 #daty{
     width: 300px;
-    border: 1px solid #009394;
+    border: 1px solid #76C090;
     background-color: white; 
 }
 
 #motdepasse{
     width: 295px;
-    border: 1px solid #009394;
+    border: 1px solid #76C090;
     background-color: white;
 }
 
@@ -74,9 +76,9 @@
 }
 
 #btn_connect:hover{
-    background-color: #00E0C7;
+    background-color: #76C090;
     color: white;
-    border: 1px solid #00E0C7;
+    border: 1px solid #76C090;
 }
 
 #suggestion{

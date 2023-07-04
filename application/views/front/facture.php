@@ -11,13 +11,14 @@
 <body>
     <header class="navbar">
         <div class="navbar__logo">
-            <img src="<?php echo base_url()?>assets/frontoffice/img/logo_vert.png" alt="" srcset="">
+            <img src="<?php echo base_url() ?>assets/frontoffice/img/vert.svg" alt="" srcset="">
         </div>
         <div class="navbar__list">
-            <a href="index.html" class="navbar__list--links">Acceuil</a>
-            <a href="commande.html" class="navbar__list--links">Commande</a>
-            <a href="panier.html" class="navbar__list--links">Panier</a>
-            <a href="contact.html" class="navbar__list--links">Contact</a>
+            <a href="<?php echo base_url()?>Kalivan/client" class="navbar__list--links">Accueil</a>
+            <a href="<?php echo base_url()?>Kalivan/commandeClient" class="navbar__list--links">Commande</a>
+            <a href="<?php echo base_url()?>Kalivan/panier" class="navbar__list--links">Panier</a>
+            <a href="<?php echo base_url()?>Kalivan/contactClient" class="navbar__list--links">Contact</a>
+            <a href="<?php echo base_url()?>Kalivan/#" class="navbar__list--links">Se déconnecter</a>
         </div>
     </header>
 
@@ -27,7 +28,7 @@
         <div class="page__facture">
             <div class="page__facture__header">
                 <div class="page__facture__header__logo">
-                    <img src="<?php echo base_url()?>assets/frontoffice/img/logo_vert.png" alt="" srcset="">
+                    <img src="<?php echo base_url() ?>assets/frontoffice/img/vert.svg" alt="" srcset="">
                 </div>
                 <div class="page__facture__header__entete">
                     <h2>FACTURE</h2>
@@ -45,27 +46,24 @@
                         <td class="quantite">Quantite</td>
                         <td class="total">Total</td>
                     </tr>
-                    <tr class="corps">
-                        <td class="numero">01</td>
-                        <td class="produit">Spaghetti</td>
-                        <td class="prix">5 000 Ar</td>
-                        <td class="quantite">2</td>
-                        <td class="total">10 000 Ar</td>
-                    </tr>
-                    <tr class="corps">
-                        <td class="numero">02</td>
-                        <td class="produit">Spaghetti</td>
-                        <td class="prix">5 000 Ar</td>
-                        <td class="quantite">2</td>
-                        <td class="total">10 000 Ar</td>
-                    </tr>
-                    <tr class="corps">
-                        <td class="numero">03</td>
-                        <td class="produit">Spaghetti</td>
-                        <td class="prix">5 000 Ar</td>
-                        <td class="quantite">2</td>
-                        <td class="total">10 000 Ar</td>
-                    </tr>
+                
+                    <?php  
+                    if($facture == null){
+                        echo 'tsitsy';
+                    }
+                    foreach ($facture as $row) { ?>
+                        <tr class="corps">
+                            <td class="numero"><?php echo $row['IDCOMMANDE'];?></td>
+                            <td class="produit"><?php echo $row['NOM'];?></td>
+                            <td class="prix"><?php echo $row['PRIX'];?> Ar</td>
+                            <td class="quantite"><?php echo $row['QUANTITE'];?></td>
+                            <td class="total"><?php 
+                                echo $row['PRIX'] * $row['QUANTITE'];
+                                echo $i;
+                            ?></td>
+                        </tr>
+                    <?php } ?>
+
                     <tr class="subtotal">
                         <td></td>
                         <td></td>
@@ -98,7 +96,7 @@
             </div>
             <div class="page__facture__footer">
                 <div class="left">
-                    <p><i class="fas fa-phone"></i> +261 3225456895</p>
+                    <p><i class="fas fa-phone"></i> +261 381234578</p>
                     <p><i class="far fa-envelope"> kalivan.info@gmail.com</i></p>
                 </div>
                 

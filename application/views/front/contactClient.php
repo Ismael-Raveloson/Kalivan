@@ -32,11 +32,11 @@
         <img src="<?php echo base_url() ?>assets/frontoffice/img/vert.svg" alt="" srcset="">
         </div>
         <div class="navbar__list">
-            <a href="<?php echo base_url()?>Kalivan/index" class="navbar__list--links">Accueil</a>
-            <a href="<?php echo base_url()?>Kalivan/commande" class="navbar__list--links">Commande</a>
-            <!-- <a href="<?php echo base_url()?>Kalivan/panier" class="navbar__list--links">Panier</a> -->
-            <a href="<?php echo base_url()?>Kalivan/contact" class="navbar__list--links">Contact</a>
-            <a href="<?php echo base_url()?>Kalivan/sign" class="navbar__list--links">Se connecter</a>
+        <a href="<?php echo base_url()?>Kalivan/client" class="navbar__list--links">Accueil</a>
+            <a href="<?php echo base_url()?>Kalivan/commandeClient" class="navbar__list--links">Commande</a>
+            <a href="<?php echo base_url()?>Kalivan/panier" class="navbar__list--links">Panier</a>
+            <a href="<?php echo base_url()?>Kalivan/contactClient" class="navbar__list--links">Contact</a>
+            <a href="<?php echo base_url()?>Kalivan/#" class="navbar__list--links">Se déconnecter</a>
         </div>
     </header>
 
@@ -81,7 +81,7 @@
                         <div class="mail">
                             <a href="mailto:adresse-email@example.com">
                             <i class="far fa-envelope"></i>
-                            www.kalivan.com
+                            kalivan.info@gmail.com
                             </a>
                         </div></br>
                         </br>
@@ -89,7 +89,7 @@
                         <div class="numero">
                             <a href="tel:+123456789">
                             <i class="fas fa-phone"></i>
-                            038 123 45 678
+                            +261 381234578
                             </a>
                         </div></br>
 
