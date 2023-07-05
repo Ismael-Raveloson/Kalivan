@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/backoffice/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/backoffice/css/bootstrap/index.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/backoffice/fontawesome-5/css/all.css">
-    <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/backoffice/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo base_url() ?>assets/frontoffice/img/Vert.svg" type="image/x-icon">
     <title>Kalivan</title>
 </head>
 <body>

@@ -1,3 +1,10 @@
+<?php
+    if(isset($_GET['idPlat'])){
+      $idP = $_GET['idPlat'];  
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/backoffice/sass/jour.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/backoffice/fontawesome-5/css/all.css">
-    <link rel="shortcut icon" href="<?php echo base_url()?>assets/backoffice/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo base_url() ?>assets/frontoffice/img/Vert.svg" type="image/x-icon">
     <title>Kalivan</title>
 </head>
 <body>
@@ -22,13 +29,13 @@
     <div class="page">
         <div class="page__formulaire">
             <div class="select-dropdown">
-                <form action="" method="get">
+                <form action="<?php echo base_url()?>BackOffice/updatePJ" method="post">
                     <p><select name="plat" id="" value="">
-                        <option value="">Spaghetti</option>
-                        <option value="">Boulette</option>
-                        <option value="">Coca</option>
-                        <option value="">Hen'omby</option>
+                        <?php foreach($menu as $row){?>
+                        <option value="<?php echo $row['idPlat'];?>"><?php echo $row['nom'];?></option>
+                        <?php } ?>
                     </select></p>
+                    <input type="hidden" name="idPlat" value="<?php echo $idP; ?>">
                     <button class="changer" type="submit">Changer le plat</button>
                 </form>
             </div>
@@ -37,8 +44,12 @@
 
     <footer class="footer">
         <div class="footer__info">
-            <img src="<?php echo base_url()?>assets/backoffice/img/logo.png" alt="" class="footer__info__imaga">
-            <p>Sanctus dolor nam justo illum diam. Ea magna sadipscing sadipscing tempor facilisi et at. Ipsum lorem est diam ipsum et aliquyam facilisis sea minim. Elitr rebum tempor rebum consetetur diam duo rebum at dolor tation et est accusam dolor magna feugait sit duo.©Kalivan 2023</p>
+            <img src="<?php echo base_url() ?>assets/frontoffice/img/vert.svg" alt="" class="footer__info__imaga">
+            <p>Kalivan est une start-up qui à terme peut devenir une
+                    enseigne de food-truck. Kalivan a pour spécificité de
+                    proposer des plats locaux et vegans. Sachant que
+                    c’est un food-truck, Kalivan propose des plats à emporter dans les quartiers d’affaires de la capitale.
+                    ©Kalivan 2023</p>
             <div class="footer__info__media">
                 <i class="fab fa-facebook-f"></i>
                 <i class="fab fa-twitter"></i>

@@ -31,27 +31,27 @@ create table Plat(
 );
 
 
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Kabaro avec poulet", "Un délicieux plat traditionnel composé de morceaux de poulet tendres et savoureux, accompagnés d'une sauce épicée. ", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/1.jpg", 2, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Haricot et viande", "Un plat copieux et réconfortant préparé avec des haricots mijotés et de tendres morceaux de viande", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/2.jpg", 2, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Boulette de viande et riz", "Des boulettes de viande assaisonnées avec soin et cuites à la perfection, servies avec du riz moelleux.", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/3.jpg", 2, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Saucisse légume", "Des saucisses de qualité supérieure accompagnées d'un assortiment de légumes frais et croquants.", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/4.jpg", 2, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Boulette de viande et haricot rouge", "De délicieuses boulettes de viande préparées avec des épices aromatiques, servies avec des haricots rouges mijotés.", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/5.jpg", 2, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Cresson et viande", "Un mélange savoureux de cresson frais et de viande tendre, relevé par des épices et des herbes aromatiques.", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/6.jpg", 2, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Soupe mélange de viande", "Une soupe généreuse et réconfortante préparée avec un mélange savoureux de viandes tendres et de légumes frais.", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/7.jpg", 2, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Poivron farci", "Des poivrons colorés et juteux, soigneusement farcis avec un mélange savoureux de viande hachée, de riz et d'épices.", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/31.jpg", 2, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Casoulet saucisse", "Plat local à diversité de saveur", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/33.jpeg", 2, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Kabaro avec poulet", "Un delicieux plat traditionnel compose de morceaux de poulet tendres et savoureux, accompagnes d'une sauce epicee. ", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/1.jpg", 2, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Haricot et viande", "Un plat copieux et reconfortant prepare avec des haricots mijotes et de tendres morceaux de viande", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/2.jpg", 2, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Boulette de viande et riz", "Des boulettes de viande assaisonnees avec soin et cuites a la perfection, servies avec du riz moelleux.", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/3.jpg", 2, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Saucisse legume", "Des saucisses de qualite superieure accompagnees d'un assortiment de legumes frais et croquants.", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/4.jpg", 2, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Boulette de viande et haricot rouge", "De delicieuses boulettes de viande preparees avec des epices aromatiques, servies avec des haricots rouges mijotes.", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/5.jpg", 2, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Cresson et viande", "Un melange savoureux de cresson frais et de viande tendre, releve par des epices et des herbes aromatiques.", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/6.jpg", 2, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Soupe melange de viande", "Une soupe genereuse et reconfortante preparee avec un melange savoureux de viandes tendres et de legumes frais.", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/7.jpg", 2, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Poivron farci", "Des poivrons colores et juteux, soigneusement farcis avec un melange savoureux de viande hachee, de riz et d'epices.", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/31.jpg", 2, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Casoulet saucisse", "Plat local a diversite de saveur", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/33.jpeg", 2, 1);
 insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Riz cantonais", "Le riz jaune local au goût de la nature", 5000, "assets/frontoffice/img/photo/photo-plat-locaux/32.jpg", 2, 1);
 
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Lassary mélange", "Un plat végétarien savoureux composé d'un mélange varié de légumes frais, de légumineuses et d'épices.", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/8.jpg", 1, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Salade de pâte avec sauce", "Une salade fraîche et savoureuse préparée avec des pâtes cuites al dente et une sauce délicieusement assaisonnée.", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/9.jpg", 1, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Soupe légume", "Une soupe légère et réconfortante préparée avec un mélange coloré de légumes de saison.", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/10.jpg", 1, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Salade de céréales", "Une salade nourrissante et riche en fibres, composée d'un mélange de céréales variées, de légumes croquants et d'une vinaigrette légère.", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/11.jpg", 1, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Chou-fleur garni", "Un plat végétarien créatif mettant en vedette le chou-fleur comme ingrédient principal.", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/12.jpg", 1, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Salade de légume avec pâte", "Une salade fraîche et croquante garnie de légumes colorés et de pâtes légères.", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/13.jpg", 1, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Salade de légume", "Une salade rafraîchissante préparée avec une variété de légumes frais et croquants. ", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/14.jpg", 1, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Sauce légume", "Une sauce légère et savoureuse préparée avec des légumes frais et des épices aromatiques.", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/15.jpg", 1, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Sauce légume et riz", "Une combinaison délicieuse de sauce légume maison et de riz moelleux", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/16.jpg", 1, 1);
-insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Lassar et légume", "Un plat végétarien équilibré et savoureux composé de légumes frais et de lassar, une préparation culinaire traditionnelle", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/17.jpg", 1, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Lassary melange", "Un plat vegetarien savoureux compose d'un melange varie de legumes frais, de legumineuses et d'epices.", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/8.jpg", 1, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Salade de pate avec sauce", "Une salade fraiche et savoureuse preparee avec des pates cuites al dente et une sauce delicieusement assaisonnee.", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/9.jpg", 1, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Soupe legume", "Une soupe legere et reconfortante preparee avec un melange colore de legumes de saison.", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/10.jpg", 1, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Salade de cereales", "Une salade nourrissante et riche en fibres, composee d'un melange de cereales variees, de legumes croquants et d'une vinaigrette legere.", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/11.jpg", 1, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Chou-fleur garni", "Un plat vegetarien creatif mettant en vedette le chou-fleur comme ingredient principal.", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/12.jpg", 1, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Salade de legume avec pate", "Une salade fraiche et croquante garnie de legumes colores et de pâtes legeres.", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/13.jpg", 1, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Salade de legume", "Une salade rafraichissante preparee avec une variete de legumes frais et croquants. ", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/14.jpg", 1, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Sauce legume", "Une sauce legere et savoureuse preparee avec des legumes frais et des epices aromatiques.", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/15.jpg", 1, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Sauce legume et riz", "Une combinaison delicieuse de sauce legume maison et de riz moelleux", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/16.jpg", 1, 1);
+insert into Plat(nom,information,prix,photo,idCategorie,dispo) values("Lassar et legume", "Un plat vegetarien equilibre et savoureux compose de legumes frais et de lassar, une preparation culinaire traditionnelle", 5000, "assets/frontoffice/img/photo/photo-plat-vegan/17.jpg", 1, 1);
 
 
 create table Utilisateur(
@@ -122,8 +122,7 @@ CREATE TABLE DETAILCOMMANDE(
 CREATE TABLE PLAT_DU_JOUR(
 	IDPDJ INT AUTO_INCREMENT PRIMARY KEY,
 	IDPLAT INT,
-	JOUR DATE,
-	FOREIGN KEY (IDPLAT) REFERENCES PLAT (IDPLAT)
+	JOUR DATE
 );
 
 INSERT INTO PLAT_DU_JOUR (IDPLAT,JOUR) VALUES (2,NOW());
@@ -155,6 +154,19 @@ CREATE OR REPLACE VIEW v_facture AS(
 	)
 );
 
+
+CREATE OR REPLACE VIEW v_sommeFacture AS( 
+	SELECT c.IDUTILISATEUR, SUM(p.PRIX * dc.QUANTITE) AS Somme
+	FROM DETAILCOMMANDE dc
+	JOIN PLAT p ON dc.IDPLAT = p.IDPLAT
+	JOIN COMMANDE c ON c.IDCOMMANDE = dc.IDCOMMANDE
+	WHERE dc.IDCOMMANDE IN (
+		SELECT MAX(IDCOMMANDE)
+		FROM DETAILCOMMANDE
+		GROUP BY IDUTILISATEUR
+	)
+	GROUP BY c.IDUTILISATEUR
+);
 
 CREATE OR REPLACE VIEW v_CommandeValider AS(
 	SELECT dc.IDDETAIL,dc.IDCOMMANDE,p.NOM,dc.QUANTITE,c.HEURERECUPERATION , dc.ETAT

@@ -7,6 +7,33 @@
     height: auto;
     padding-top: 90px;
 
+    @media print {
+        @page {
+          size: A4 landscape; /* Set the page size to landscape */
+          margin: 0; /* Remove the default margins */
+        }
+      
+        body {
+          width: 100%; /* Set the width of the body to 100% of the page */
+        }
+      
+        /* Adjust the width of specific elements as needed */
+        #section {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+      
+        .page {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+      
+        /* Add more CSS rules to adjust other elements if necessary */
+      }
+      
+
     button.pdf{
         cursor: pointer;
         float: right;

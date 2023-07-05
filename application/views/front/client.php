@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/frontoffice/sass/index.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/frontoffice/fontawesome-5/css/all.css">
-    <link rel="shortcut icon" href="<?php echo base_url() ?>assets/frontoffice/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo base_url() ?>assets/frontoffice/img/Vert.svg" type="image/x-icon">
     <title>Kalivan</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
             <a href="<?php echo base_url()?>Kalivan/commandeClient" class="navbar__list--links">Commande</a>
             <a href="<?php echo base_url()?>Kalivan/panier" class="navbar__list--links">Panier</a>
             <a href="<?php echo base_url()?>Kalivan/contactClient" class="navbar__list--links">Contact</a>
-            <a href="<?php echo base_url()?>Kalivan/deconnecter" class="navbar__list--links">Se déconnecter</a>
+            <a href="<?php echo base_url()?>#" class="navbar__list--links">Se déconnecter</a>
         </div>
     </header>
 
@@ -27,10 +27,10 @@
             <div class="page__caroussel__info">
                 <h1>Who are we ?</h1>
                 
-                <p>Consectetuer dolore vero ea gubergren justo amet wisi et enim 
-                justo eos. Ut molestie lorem stet ut erat lorem est iusto esse
-                feugiat dolor eirmod et tempor kasd sed labore et ad gubergren dolor est eos. Mazim vel vero ipsum diam magna sea veniam 
-                esse diam amet amet invidunt sea eirmod. Rebum diam ea amet duo vulputate lorem nulla justo gubergren diam te dolores ex magna invidunt.</p>
+                <p>Kalivan est une start-up qui à terme peut devenir une
+                    enseigne de food-truck. Kalivan a pour spécificité de
+                    proposer des plats locaux et vegans. Sachant que
+                    c’est un food-truck, Kalivan propose des plats à emporter dans les quartiers d’affaires de la capitale.</p>
             </div>
 
             <div class="page__caroussel__image">
@@ -78,7 +78,7 @@
             <div class="page__location__card">
                 <h4 class="page__location__card__title">Mercredi - Jeudi</h4>
                 <p>Ipsum diam tempor tempor sit sanctus veniam et lorem blandit amet accusam ea elitr at tempor amet ipsum odio.</p>
-                <button><a href=""><i class="fas fa-map-pin"></i> Tanjombato</a></button>
+                <button><a href=""><i class="fas fa-map-pin"></i> Anosy</a></button>
             </div>
             <div class="page__location__card">
                 <h4 class="page__location__card__title">Vendredi - Samedi</h4>
@@ -90,8 +90,12 @@
 
     <footer class="footer">
         <div class="footer__info">
-            <img src="<?php echo base_url() ?>assets/frontoffice/img/logo.png" alt="" class="footer__info__imaga">
-            <p>Sanctus dolor nam justo illum diam. Ea magna sadipscing sadipscing tempor facilisi et at. Ipsum lorem est diam ipsum et aliquyam facilisis sea minim. Elitr rebum tempor rebum consetetur diam duo rebum at dolor tation et est accusam dolor magna feugait sit duo.©Kalivan 2023</p>
+            <img src="<?php echo base_url() ?>assets/frontoffice/img/vert.svg" alt="" class="footer__info__imaga">
+            <p>Kalivan est une start-up qui à terme peut devenir une
+                    enseigne de food-truck. Kalivan a pour spécificité de
+                    proposer des plats locaux et vegans. Sachant que
+                    c’est un food-truck, Kalivan propose des plats à emporter dans les quartiers d’affaires de la capitale.
+                    ©Kalivan 2023</p>
             <div class="footer__info__media">
                 <i class="fab fa-facebook-f"></i>
                 <i class="fab fa-twitter"></i>

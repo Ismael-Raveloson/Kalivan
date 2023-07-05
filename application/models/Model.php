@@ -20,16 +20,23 @@
             return $val;
         }
 
+        function modifPdj($idPlat,$actuel){
+            $sql = "UPDATE PLAT_DU_JOUR SET IDPLAT = %d , JOUR = NOW() WHERE IDPDJ = %d";
+            $req = sprintf($sql,$idPlat,$actuel);
+            $this->db->query($req);
+            echo $req;
+        }
+
         function platLany($idPlat){
             $sql = "UPDATE PLAT SET DISPO = 2 WHERE IDPLAT = %d";
             $req = sprintf($sql,$idPlat);
             $this->db->query($req);
         }
 
-        function modifierDispo(){
+        function modifierDispo($idPlat){
             $sql = "UPDATE PLAT SET DISPO = 1 WHERE IDPLAT = %d";
             $req = sprintf($sql,$idPlat);
-            $this->db->query($sql);
+            $this->db->query($req);
         }
 
         function modifAll($nom,$information,$prix,$photo,$idCategorie){
@@ -96,25 +103,24 @@
         function annulerDetail($idDetail){
             $sql = "DELETE FROM DETAILCOMMANDE WHERE IDDETAIL = %d";
             $req = sprintf($sql,$idDetail);
-            // $this->db->query($idDetail); 
-            echo $req;
+            $this->db->query($req); 
         }
 
         function sendCuisine($idDetail){
             $sql = "UPDATE DETAILCOMMANDE SET ETAT = 2 WHERE IDDETAIL=%d";
-            $req = sprintf($sql,$req);
+            $req = sprintf($sql,$idDetail);
             $this->db->query($req);
         }
         
         function sendAttente($idDetail){
             $sql = "UPDATE DETAILCOMMANDE SET ETAT = 3 WHERE IDDETAIL=%d";
-            $req = sprintf($sql,$req);
+            $req = sprintf($sql,$idDetail);
             $this->db->query($req);
         }
 
         function sendRecu($idDetail){
-            $sql = "UPDATE DETAILCOMMANDE SET ETAT = 3 WHERE IDDETAIL=%d";
-            $req = sprintf($sql,$req);
+            $sql = "UPDATE DETAILCOMMANDE SET ETAT = 4 WHERE IDDETAIL=%d";
+            $req = sprintf($sql,$idDetail);
             $this->db->query($req);
         }
     }

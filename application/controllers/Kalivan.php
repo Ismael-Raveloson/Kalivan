@@ -67,6 +67,7 @@
             $data['facture'] = $this->Fonction->getFacture($idClient);
             $data['info'] = $this->Fonction->infoClient($idClient);
             $data['idCommande'] = $this->Fonction->lastCommandeClient($idClient);
+            $data['somme'] = $this->Fonction->getSommeFacture($idClient);
             $this->load->view('front/facture.php',$data);
         }
 

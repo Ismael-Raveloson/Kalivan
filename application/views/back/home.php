@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/backoffice/sass/home.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/backoffice/fontawesome-5/css/all.css">
-    <link rel="shortcut icon" href="<?php echo base_url()?>assets/backoffice/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo base_url() ?>assets/frontoffice/img/Vert.svg" type="image/x-icon">
     <title>Kalivan</title>
 </head>
 <body>
@@ -27,7 +27,10 @@
                 <!-- Plat Jour -->
 
                 <?php
-                    foreach ($jour as $row) { ?>
+                    $i = 1;
+                    foreach ($jour as $row) {
+                        if($row['DISPO'] == 1){ 
+                         ?>
                         <div class="page__platjour__content__card">
                             <form action="<?php echo base_url();?>BackOffice/outPlat" method="post">
                                 <img src="<?php echo base_url()?><?php echo $row['PHOTO'] ?>" alt="" srcset="">
@@ -39,13 +42,31 @@
                                         <button class="vide"><i class="fas fa-tag"></i> OUT</button>
                                     </span>
                                 </div>
-                                <input type="hidden" name="idplat" value="<?php echo $row['IDPLAT'] ?>">
+                                <input type="hidden" name="idplat" value="<?php echo $row['IDPLAT']; ?>">
                             </form>   
-
-                                <button type="submit" class="changer"><a href="<?php echo base_url()?>BackOffice/modifJour"><i class="far fa-edit"></i></a> </button>
+                                <button type="submit" class="changer"><a href="<?php echo base_url()?>BackOffice/modifJour?idPlat=<?php echo $i; ?>"><i class="far fa-edit"></i></a> </button>
                         </div>
-                             
-                <?php } ?>
+                        <?php } else { ?>
+                            <div class="page__platjour__content__card">
+                            <form action="<?php echo base_url();?>BackOffice/modifDispo" method="post">
+                                <img src="<?php echo base_url()?><?php echo $row['PHOTO'] ?>" alt="" srcset="">
+                                <h2><?php echo $row['NOM'] ?></h2>
+                                <p><?php echo $row['INFORMATION'] ?></p>
+                                <div class="page__platjour__content__card__info">
+                                    <span class="prix"><?php echo $row['PRIX'] ?> Ar</span>
+                                    <span class="out">
+                                        <button class="vide"><i class="fas fa-tag"></i> BACK</button>
+                                    </span>
+                                </div>
+                                <input type="hidden" name="idplat" value="<?php echo $row['IDPLAT']; ?>">
+                            </form>   
+                                <button type="submit" class="changer"><a href="<?php echo base_url()?>BackOffice/modifJour?idPlat=<?php echo $i; ?>"><i class="far fa-edit"></i></a> </button>
+                        </div>
+                <?php 
+                        }
+
+                $i = $i +1;
+            } ?>
 
                 <!-- <form action="" method="get" class="page__platjour__content__card">
                     <div>
@@ -117,26 +138,49 @@
             <section class="page__menu__content">
 
                 <?php 
-                    foreach($menu as $row){ ?>
-                    <div class="page__menu__content__card" data-category="<?php echo $row['idCategorie'];?>">
-                        <form action="<?php echo base_url();?>BackOffice/outPlat" method="post" >
-                            
-                                <img src="<?php echo base_url()?><?php echo $row['photo'] ?>" alt="" srcset="">
-                                <h2><?php echo $row['nom'] ?></h2>
-                                <p><?php echo $row['information'] ?></p>
-                                <div class="page__menu__content__card__info">
-                                    <span class="prix"><?php echo $row['prix'] ?> Ar</span>
-                                    <span class="quantity">
-                                        <span class="out">
-                                            <button class="vide"><i class="fas fa-tag"></i> OUT</button>
-                                        </span>
-                                    </span>
-                                </div>
-                                <input type="hidden" name="idplat" value="<?php echo $row['idPlat'] ?>">
-                                <button type="submit" class="valider"><a href="#"><i class="far fa-edit"></i></a></button>
-                        </form>
-                    </div>
-                <?php } ?>
+                    foreach($menu as $row){ 
+                        if($row['dispo'] == 1){  ?>
+                            <div class="page__menu__content__card" data-category="<?php echo $row['idCategorie'];?>">
+                                <form action="<?php echo base_url();?>BackOffice/outPlat" method="post" >
+                                    
+                                        <img src="<?php echo base_url()?><?php echo $row['photo'] ?>" alt="" srcset="">
+                                        <h2><?php echo $row['nom'] ?></h2>
+                                        <p><?php echo $row['information'] ?></p>
+                                        <div class="page__menu__content__card__info">
+                                            <span class="prix"><?php echo $row['prix'] ?> Ar</span>
+                                            <span class="quantity">
+                                                <span class="out">
+                                                    <button class="vide"><i class="fas fa-tag"></i> OUT</button>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <input type="hidden" name="idplat" value="<?php echo $row['idPlat'] ?>">
+                                    </form>
+                                        <button type="submit" class="valider"><a href="<?php echo base_url();?>BackOffice/modification"><i class="far fa-edit"></i></a></button>
+                            </div>
+                    <?php }else{ ?>
+                        <div class="page__menu__content__card" data-category="<?php echo $row['idCategorie'];?>">
+                                <form action="<?php echo base_url();?>BackOffice/modifDispo" method="post" >
+                                    
+                                        <img src="<?php echo base_url()?><?php echo $row['photo'] ?>" alt="" srcset="">
+                                        <h2><?php echo $row['nom'] ?></h2>
+                                        <p><?php echo $row['information'] ?></p>
+                                        <div class="page__menu__content__card__info">
+                                            <span class="prix"><?php echo $row['prix'] ?> Ar</span>
+                                            <span class="quantity">
+                                                <span class="out">
+                                                    <button class="vide"><i class="fas fa-tag"></i> BACK</button>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <input type="hidden" name="idplat" value="<?php echo $row['idPlat'] ?>">
+                                    </form>
+                                        <button type="submit" class="valider"><a href="<?php echo base_url();?>BackOffice/modification"><i class="far fa-edit"></i></a></button>
+                            </div>
+                <?php } 
+                
+                    }
+                ?>
 
  
 
@@ -237,8 +281,12 @@
     
     <footer class="footer">
         <div class="footer__info">
-            <img src="<?php echo base_url()?>assets/backoffice/img/logo.png" alt="" class="footer__info__imaga">
-            <p>Sanctus dolor nam justo illum diam. Ea magna sadipscing sadipscing tempor facilisi et at. Ipsum lorem est diam ipsum et aliquyam facilisis sea minim. Elitr rebum tempor rebum consetetur diam duo rebum at dolor tation et est accusam dolor magna feugait sit duo.©Kalivan 2023</p>
+            <img src="<?php echo base_url() ?>assets/frontoffice/img/vert.svg" alt="" class="footer__info__imaga">
+            <p>Kalivan est une start-up qui à terme peut devenir une
+                    enseigne de food-truck. Kalivan a pour spécificité de
+                    proposer des plats locaux et vegans. Sachant que
+                    c’est un food-truck, Kalivan propose des plats à emporter dans les quartiers d’affaires de la capitale.
+                    ©Kalivan 2023</p>
             <div class="footer__info__media">
                 <i class="fab fa-facebook-f"></i>
                 <i class="fab fa-twitter"></i>

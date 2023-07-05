@@ -26,8 +26,8 @@
         }
 
         function verifUtilAdmin($email,$mdp){
-            $sql = "SELECT * FROM Utilisateur WHERE email = %s AND motDePasse = %s";
-            $req = sprintf($sql,$this->db->escape($email),$this->db->escape($mdp));
+            $sql = "SELECT * FROM Utilisateur WHERE email = %d AND motDePasse = %d";
+            $req = sprintf($sql,$email,$mdp);
             $result = array();
             $valiny = false;
             $query = $this->db->query($req);
@@ -99,8 +99,6 @@
             $this->viderPanier($id);
         }
 
-
-
         function lastCommande(){
             $sql = "SELECT IDCOMMANDE FROM COMMANDE ORDER BY IDCOMMANDE DESC LIMIT 1";
             $val = "";
@@ -110,7 +108,6 @@
             }
             return $val;
         }
-
 
         function lastCommandeClient($client){
             $sql = "SELECT IDCOMMANDE FROM COMMANDE WHERE IDUTILISATEUR = %d ORDER BY IDCOMMANDE DESC LIMIT 1";
@@ -171,7 +168,7 @@
             $req = sprintf($sql,$idclient);
             $query = $this->db->query($req);
             $valiny = array();
-            foreach($valiny  as $row){
+            foreach($query->result_array() as $row) {
                 $valiny[] = $row;
             }
             return $valiny;
@@ -182,7 +179,18 @@
             $req = sprintf($sql,$this->db->escape($idclient));
             $query = $this->db->query($req);
             $valiny = array();
-            foreach ($valiny as $row) {
+            foreach($query->result_array() as $row) {
+                $valiny[] = $row;
+            }
+            return $valiny;
+        }
+
+        function getSommeFacture($idclient){
+            $sql = "SELECT Somme FROM v_sommeFacture WHERE IDUTILISATEUR = %d";
+            $req = sprintf($sql,$idclient);
+            $query = $this->db->query($req);
+            $valiny = array();
+            foreach($query->result_array() as $row) {
                 $valiny[] = $row;
             }
             return $valiny;

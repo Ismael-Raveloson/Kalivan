@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/frontoffice/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/frontoffice/css/bootstrap/inscription.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/frontoffice/fontawesome-5/css/all.css">
-    <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/frontoffice/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo base_url() ?>assets/frontoffice/img/Vert.svg" type="image/x-icon">
 </head>
 <body>
     

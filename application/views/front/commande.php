@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/frontoffice/sass/commande.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/frontoffice/fontawesome-5/css/all.css">
-    <link rel="shortcut icon" href="<?php echo base_url()?>assets/frontoffice/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo base_url() ?>assets/frontoffice/img/Vert.svg" type="image/x-icon">
     <title>Kalivan</title>
 </head>
 <body>
@@ -26,7 +26,29 @@
             <h2 class="title">Plat du jour !!</h2>
             <div class="page__platjour__content">
                 <!-- Plat Jour -->
-                <form action="<?php echo base_url()?>Kalivan/sign" method="post" class="page__platjour__content__card">
+                <?php 
+                    foreach ($jour as $row) { ?>
+                        <form action="<?php echo base_url()?>Kalivan/sign" method="post" class="page__platjour__content__card">
+                            <div>
+                                <img src="<?php echo base_url()?><?php echo $row['PHOTO']; ?>" alt="" srcset="">
+                                <h2><?php echo $row['NOM']; ?></h2>
+                                <p><?php echo $row['INFORMATION']; ?></p>
+                                <div class="page__platjour__content__card__info">
+                                    <span class="prix"> <?php echo $row['PRIX']; ?> Ar</span>
+                                    <span class="quantity">
+                                        <span class="quantity__button increase"><i class="fas fa-plus"></i></span>
+                                            <input type="number" name="quantite" value="1" class="quantity-input" min="1">
+                                        <span class="quantity__button decrease"><i class="fas fa-minus"></i></span>
+                                    </span>
+                                </div>
+                                <input type="hidden" name="idplat" value="PLAT1">
+                                <button type="submit" class="valider"><a href="#"><i class="fas fa-cart-arrow-down"></i></a></button>
+                            </div>
+                        </form>        
+                <?php } ?>
+                
+
+                <!-- <form action="<?php echo base_url()?>Kalivan/sign" method="get" class="page__platjour__content__card">
                     <div>
                         <img src="<?php echo base_url()?>assets/frontoffice/img/commande/food.jpg" alt="" srcset="">
                         <h2>Spaghetti aux fromages</h2>
@@ -60,25 +82,7 @@
                         <input type="hidden" name="idplat" value="PLAT1">
                         <button type="submit" class="valider"><a href="#"><i class="fas fa-cart-arrow-down"></i></a></button>
                     </div>
-                </form>
-
-                <form action="<?php echo base_url()?>Kalivan/sign" method="get" class="page__platjour__content__card">
-                    <div>
-                        <img src="<?php echo base_url()?>assets/frontoffice/img/commande/food.jpg" alt="" srcset="">
-                        <h2>Spaghetti aux fromages</h2>
-                        <p>Dolor quis accusam. Nisl lorem commodo stet lobortis diam sit nonumy rebum ut tation lorem sed.</p>
-                        <div class="page__platjour__content__card__info">
-                            <span class="prix"> 5 000 Ar</span>
-                            <span class="quantity">
-                                <span class="quantity__button increase"><i class="fas fa-plus"></i></span>
-                                    <input type="number" name="quantite" value="1" class="quantity-input" min="1">
-                                <span class="quantity__button decrease"><i class="fas fa-minus"></i></span>
-                            </span>
-                        </div>
-                        <input type="hidden" name="idplat" value="PLAT1">
-                        <button type="submit" class="valider"><a href="#"><i class="fas fa-cart-arrow-down"></i></a></button>
-                    </div>
-                </form>
+                </form> -->
                 
             </div>
         </div>
@@ -218,8 +222,12 @@
     
     <footer class="footer">
         <div class="footer__info">
-            <img src="<?php echo base_url()?>assets/frontoffice/img/logo.png" alt="" class="footer__info__imaga">
-            <p>Sanctus dolor nam justo illum diam. Ea magna sadipscing sadipscing tempor facilisi et at. Ipsum lorem est diam ipsum et aliquyam facilisis sea minim. Elitr rebum tempor rebum consetetur diam duo rebum at dolor tation et est accusam dolor magna feugait sit duo.©Kalivan 2023</p>
+            <img src="<?php echo base_url() ?>assets/frontoffice/img/vert.svg" alt="" class="footer__info__imaga">
+            <p>Kalivan est une start-up qui à terme peut devenir une
+                    enseigne de food-truck. Kalivan a pour spécificité de
+                    proposer des plats locaux et vegans. Sachant que
+                    c’est un food-truck, Kalivan propose des plats à emporter dans les quartiers d’affaires de la capitale.
+                    ©Kalivan 2023</p>
             <div class="footer__info__media">
                 <i class="fab fa-facebook-f"></i>
                 <i class="fab fa-twitter"></i>

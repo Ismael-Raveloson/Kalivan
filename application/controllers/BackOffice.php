@@ -30,7 +30,20 @@
         
         public function modifJour(){
             $this->load->helper('url');
-            $this->load->view('back/modifpj.php');
+            $this->load->model('Model');
+            $data = array();
+            $data['jour'] = $this->Model->getPlatDuJour();
+            $data['menu'] = $this->Model->getAllPlat();
+            $this->load->view('back/modifpj.php',$data);
+        }
+
+        public function updatePJ(){
+            $this->load->helper('url');
+            $this->load->model('Model');
+            $plat = $this->input->post('plat');
+            $id = $this->input->post('idPlat');
+            $this->Model->modifPdj($plat,$id);
+            redirect(base_url('BackOffice/index'));
         }
 
         public function ajout(){
@@ -85,7 +98,7 @@
             $this->load->model('Model');
             $id =  $this->input->get('idDetail');
             $this->Model->annulerDetail($id);
-            // redirect(base_url('BackOffice/board'));
+            redirect(base_url('BackOffice/board'));
         }
 
 
@@ -111,6 +124,14 @@
             $id = $this->input->get('idDetail');
             $this->Model->sendRecu($id);
             redirect(base_url('BackOffice/board'));
+        }
+
+        public function modifDispo(){
+            $this->load->helper('url');
+            $this->load->model('Model');
+            $plat = $this->input->post('idplat');
+            $this->Model->modifierDispo($plat);
+            redirect(base_url('BackOffice/index'));
         }
     }
 ?>

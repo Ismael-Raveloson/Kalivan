@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/frontoffice/sass/facture.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/frontoffice/fontawesome-5/css/all.css">
-    <link rel="shortcut icon" href="<?php echo base_url()?>assets/frontoffice/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo base_url() ?>assets/frontoffice/img/Vert.svg" type="image/x-icon">
     <title>Kalivan</title>
 </head>
 <body>
@@ -22,9 +22,8 @@
         </div>
     </header>
 
-    <secion id="section">
-
     <div class="page">
+    <section id="section">
         <div class="page__facture">
             <div class="page__facture__header">
                 <div class="page__facture__header__logo">
@@ -32,7 +31,7 @@
                 </div>
                 <div class="page__facture__header__entete">
                     <h2>FACTURE</h2>
-                    <p class="reference"><b>REFERENCE FACTURE: #050</b></p>
+                    <p class="reference"><b>REFERENCE FACTURE: #<?php echo $idCommande; ?></b></p>
                     <p>Nom: Miary</p>
                     <p>Contact: 0348564752</p>
                 </div>
@@ -48,9 +47,6 @@
                     </tr>
                 
                     <?php  
-                    if($facture == null){
-                        echo 'tsitsy';
-                    }
                     foreach ($facture as $row) { ?>
                         <tr class="corps">
                             <td class="numero"><?php echo $row['IDCOMMANDE'];?></td>
@@ -59,8 +55,7 @@
                             <td class="quantite"><?php echo $row['QUANTITE'];?></td>
                             <td class="total"><?php 
                                 echo $row['PRIX'] * $row['QUANTITE'];
-                                echo $i;
-                            ?></td>
+                            ?> Ar</td>
                         </tr>
                     <?php } ?>
 
@@ -76,21 +71,27 @@
                         <td></td>
                         <td></td>
                         <td class="nom"><b>Prix HT</b></td>
-                        <td class="prix"><b>24 000 Ar</b></td>
+                        <?php foreach($somme as $row){ ?>
+                        <td class="prix"><b><?php echo $row['Somme']-($row['Somme']*(20/100))?> Ar</b></td>
+                        <?php } ?>
                     </tr>
                     <tr class="subtotal">
                         <td></td>
                         <td></td>
                         <td></td>
                         <td class="nom"><b>Taxes</b></td>
-                        <td class="prix"><b>6 000 Ar</b></td>
+                        <?php foreach($somme as $row){ ?>
+                        <td class="prix"><b><?php echo ($row['Somme']*(20/100))?> Ar</b></td>
+                        <?php } ?>
                     </tr>
                     <tr class="subtotal">
                         <td></td>
                         <td></td>
                         <td></td>
                         <td class="nom"><b>Prix TTC</b></td>
-                        <td class="prix"><b>30 000 Ar</b></td>
+                        <?php foreach($somme as $row){ ?>
+                        <td class="prix"><b><?php echo ($row['Somme'])?> Ar</b></td>
+                        <?php } ?>
                     </tr>
                 </table>
             </div>
@@ -106,8 +107,8 @@
                     <i class="fab fa-instagram"></i>
                 </div>
             </div>
-        </div>
-    </secion>
+        
+        </section>
 
         <button class="pdf" onclick="downloadPDF()"><i class="far fa-file-pdf"></i> Télécharger PDF </button>
     </div>
@@ -115,8 +116,12 @@
 
     <footer class="footer">
         <div class="footer__info">
-            <img src="<?php echo base_url()?>assets/frontoffice/img/logo.png" alt="" class="footer__info__imaga">
-            <p>Sanctus dolor nam justo illum diam. Ea magna sadipscing sadipscing tempor facilisi et at. Ipsum lorem est diam ipsum et aliquyam facilisis sea minim. Elitr rebum tempor rebum consetetur diam duo rebum at dolor tation et est accusam dolor magna feugait sit duo.©Kalivan 2023</p>
+            <img src="<?php echo base_url() ?>assets/frontoffice/img/vert.svg" alt="" class="footer__info__imaga">
+            <p>Kalivan est une start-up qui à terme peut devenir une
+                    enseigne de food-truck. Kalivan a pour spécificité de
+                    proposer des plats locaux et vegans. Sachant que
+                    c’est un food-truck, Kalivan propose des plats à emporter dans les quartiers d’affaires de la capitale.
+                    ©Kalivan 2023</p>
             <div class="footer__info__media">
                 <i class="fab fa-facebook-f"></i>
                 <i class="fab fa-twitter"></i>
