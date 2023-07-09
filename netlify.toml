@@ -1,4 +1,4 @@
 [[redirects]]
     from = "/*"
-    to = "/Kalivan/index"
+    to = "/index.php"
     status = 200
