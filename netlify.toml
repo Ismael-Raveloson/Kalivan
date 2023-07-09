@@ -1,0 +1,4 @@
+[[redirects]]
+    from = "/*"
+    to = "/Kalivan/index"
+    status = 200
