@@ -35,7 +35,7 @@ $config['base_url'] = 'https://kalivan.netlify.app/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'https://kalivan.netlify.app/Kalivan/index';
 
 /*
 |--------------------------------------------------------------------------
