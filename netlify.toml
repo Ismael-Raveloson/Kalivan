@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/*"
-  to = "https://kalivan.netlify.app/:splat"
-  status = 301
