@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://kalivan.netlify.app/';
+$config['base_url'] = 'https://kalivan.vercel.app';
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ $config['base_url'] = 'https://kalivan.netlify.app/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'https://kalivan.netlify.app/Kalivan/index';
+$config['index_page'] = 'https://kalivan.vercel.app/Kalivan/index';
 
 /*
 |--------------------------------------------------------------------------
